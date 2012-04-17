@@ -1,0 +1,2 @@
+PS1=
+PROMPT_COMMAND="echo -ne \"\e[y\$PWD\e[Y\""

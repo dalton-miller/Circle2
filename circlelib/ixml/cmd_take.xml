@@ -1,0 +1,4 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_take.xml">take</link>
+Syntax: /take [reference]
+Download a reference that someone has <link path="ixml/cmd_give.xml">/give</link>n you.
+

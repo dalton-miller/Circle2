@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Circle Search: One Ring, no rulers</title>
+<style>
+<!--
+body,td,div,a{font-family:arial,sans-serif }
+//-->
+</style>
+
+<script language="JavaScript">
+// <!-- Hide this stuff from old browsers
+
+function circle_search(form) {
+  query = form.query.value;
+  button = form.submitButton;
+
+   if(button=="submit_files")
+      {
+      if(query == null || query == "") 
+      {
+        alert("You didn't enter a search term!");
+        return false; 
+      }
+      }
+
+  // this test will pass if only one word is entered
+  if(query.split(" ") == "undefined") {
+    parsed_string = query;
+  }
+  // fail for multiple words separated by space
+  // then separate into array of words
+  else {
+    arrayOfStrings = query.split(" ");
+    parsed_string = arrayOfStrings[0];
+  }
+
+  // reattatch array of words to string separated by +
+  if(arrayOfStrings.length > 1) 
+      {
+      for(var i=1;i<arrayOfStrings.length;i++) 
+      {
+        parsed_string += "+"+arrayOfStrings[i];
+    }
+  }
+  if(button=="submit_people")
+      url="http://%s:%d/circle-find/"+parsed_string;
+  else 
+      url="http://%s:%d/circle-search/"+parsed_string;
+  location = url;
+  return false;
+}
+
+//-->
+
+</script>
+</head>
+<body style="background-color: rgb(255, 255, 255);" onload="document.gs.reset()">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td><a href="http://thecircle.org.au">%s</a></td>
+<td><br></td>
+<td style="vertical-align: middle;">
+<form name="theform" onsubmit="return circle_search(this)">
+<input type="text" name="query" size="45" maxlength="2048" value="">
+<br>
+<font size="-2">   
+<input type="submit" name="submit_files"  value="Search for files"  onClick="this.form.submitButton = this.name">  
+<input type="submit" name="submit_people" value="Search for people" onClick="this.form.submitButton = this.name">
+<span id="hf"></span> 
+</font> 
+</form>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>

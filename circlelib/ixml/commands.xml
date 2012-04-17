@@ -1,0 +1,29 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link>
+
+Index of commands:
+<link path="ixml/cmd_clear.xml">/clear</link>
+<link path="ixml/cmd_exit.xml">/exit</link>
+<link path="ixml/cmd_logout.xml">/logout</link>
+<link path="ixml/cmd_help.xml">/help</link>
+<link path="ixml/cmd_stats.xml">/stats</link>
+<link path="ixml/cmd_who.xml">/who</link>
+<link path="ixml/cmd_search.xml">/search</link>
+<link path="ixml/cmd_get.xml">/get</link>
+<link path="ixml/cmd_play.xml">/play</link>
+<link path="ixml/cmd_ls.xml">/ls</link>
+<link path="ixml/cmd_join.xml">/join</link>
+<link path="ixml/cmd_listen.xml">/listen</link>
+<link path="ixml/cmd_read.xml">/read</link>
+<link path="ixml/cmd_me.xml">/me</link>
+<link path="ixml/cmd_look.xml">/look</link>
+<link path="ixml/cmd_quiet.xml">/quiet</link>
+<link path="ixml/cmd_give.xml">/give</link>
+<link path="ixml/cmd_giveto.xml">/giveto</link>
+<link path="ixml/cmd_take.xml">/take</link>
+<link path="ixml/cmd_say.xml">/say</link>
+<link path="ixml/cmd_repeat.xml">/repeat</link>
+<link path="ixml/cmd_recall.xml">/recall</link>
+<link path="ixml/cmd_set.xml">/set</link>
+<link path="ixml/cmd_forget.xml">/forget</link>
+<link path="ixml/cmd_remember.xml">/remember</link>
+<link path="ixml/cmd_help.xml">/help</link>

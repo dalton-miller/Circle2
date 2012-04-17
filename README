@@ -1,0 +1,77 @@
+The Circle
+----------
+
+The Circle is a decentralized file sharing application
+based around the idea of a decentralized hashtable.
+
+The Circle has been tested on Linux and Windows, but should 
+work on any Unix variant if the appropriate libraries are 
+installed. To run the Circle you will need:
+
+ * Python 2.2 or higher
+ * GTK+ 2
+ * Python-GTK for GTK+ 2, version >= 2.2 
+   Note: depending on distributions, this package is called pygtk or pygtk2.
+   Note: make sure that you use compatible versions of Python and pygtk.
+ * Optionally, Python-GNOME
+ * Optionally: The Pyogg and Pyvorbis packages:  
+   see http://www.andrewchatham.com/pyogg/
+
+
+Linux users should be able to install these from their Linux distribution,
+and all of these are also available under Windows (see thecircle.org.au
+for links).
+
+To install Circle under Linux, type:
+
+  python setup.py install
+
+To start Circle type:
+
+  circle
+
+This will start both the daemon and the GUI.
+
+To start only the daemon, type:
+
+  circle start
+
+To stop the daemon, type:
+
+  circle stop
+
+To query the daemon, type:
+
+  circle status
+
+Type "circle help" for more options.
+
+
+It is possible to install multiple versions of Python on some systems,
+such as Debian and Red Hat. For example, you may have installed
+both Python 1.5 and Python 2.1. For some reason, in this case most
+systems seem to default to 1.5 when you run Python. You can remove
+the old version, or force The Circle to use the later version.  For
+example:
+
+  python2.1 setup.py install
+
+BSD users: The default OpenBSD (and possibly other BSDs) packet filter
+configuration uses a stateful UDP filter rule that The Circle finds intensely
+confusing -- you will appear to others to disappear and reappear on the
+network randomly. See circlelib/getting_started.html for instructions on
+fixing this.
+
+For further information, see the website: 
+
+  http://thecircle.org.au/
+
+If you find a bug, please submit it to:
+
+  http://savannah.nongnu.org/bugs/?group=circle
+
+Please feel free to send any comments or feature requests to
+circle-discuss@nongnu.org.
+
+The Circle is GPL software, see the file COPYING for details of this license.
+

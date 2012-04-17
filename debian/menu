@@ -1,0 +1,3 @@
+?package(circle):needs=X11 section=Apps/Net\
+  title="circle" command="/usr/bin/circle"\
+  icon=/usr/X11R6/include/X11/pixmaps/circle-icon.xpm

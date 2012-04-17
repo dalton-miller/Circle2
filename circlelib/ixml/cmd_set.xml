@@ -1,0 +1,17 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_set.xml">set</link>
+
+/set [parameter value]
+
+Set a configuration parameter. /set on its own will display your current configuration.
+
+Available parameters are:
+
+    * username: a short name which people can use to refer to you
+    * name: your actual name
+    * finger: a description of yourself that people can view
+
+Examples:
+
+      /set
+      /set name John Smith
+

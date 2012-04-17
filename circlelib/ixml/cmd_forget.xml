@@ -1,0 +1,5 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_forget.xml">forget</link>
+
+/forget nickname
+
+Remove a person from your contact list. 

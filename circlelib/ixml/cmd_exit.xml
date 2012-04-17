@@ -1,0 +1,6 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_exit.xml">exit</link>
+
+Syntax: /exit [message]
+Exit the Circle. If anyone is watching you, they will see the message, if given.
+Aliased to Ctrl-X
+

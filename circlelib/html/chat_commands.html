@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>The Circle commands</title>
+</head>
+  <body>
+         
+<h1>Circle commands</h1>
+          
+<p><br> If you use Circle in GUI mode, the commands listed below are
+not mandatory.<br> However, you will find them practical. They
+interact smoothly with the GUI.<br>
+</p>
+       
+<p>
+If you use Circle in text mode (circle -t), you need to use these
+commands.</p>
+ 
+<p><br>
+ </p>
+ 
+<p>1. <a href="#text-mode">Text mode only</a><br>
+  2. <a href="#general">General-purpose commands</a><br>
+  3. <a href="#chat">Chat related commands</a><br>
+  4. <a href="#files">File sharing commands</a><br>
+  5. <a href="#gossip-commands">Gossip related commands</a><br>
+  6. <a href="#shell">Shell commands</a><br>
+  7. <a href="#python">Python commands</a><br>
+  8. <a href="#multiple">Commands with multiple lines<br>
+  </a></p>
+   
+<p><br>
+  <br>
+  </p>
+              
+<h2><a name="text-mode"></a>Text-mode only:</h2>
+       
+<p>In text mode, you can enter the shell by pressing <b>Ctrl-D</b>. <br>
+    Since <b>Ctrl-D</b> will also exits from a shell, you can use it to toggle
+  between shell and circle.  </p>
+       
+<p>While in the shell running <tt>circle -s</tt> will display the number
+of unread messages you have. <br>
+    It will also save your current working directory for the next time you
+ enter  the shell. <br>
+    You may find it convenient to add this to your shell prompt:  </p>
+       
+<p><b>bash:</b> add the following line to your <tt>.bashrc</tt> file  </p>
+       
+<pre>      PS1="$PS1\`circle -s\`"</pre>
+          
+<p><b>zsh:</b> add the following lines to you <tt>.zshrc</tt> file  </p>
+       
+<pre>      old_prompt="$prompt"<br>      precmd() {<br>        prompt="$old_prompt`circle -s`"<br>      }</pre>
+          
+<h2> </h2>
+     
+<h2><a name="general"></a>General-purpose commands:</h2>
+   
+<h3><a name="clear">/clear</a></h3>
+             
+<p>Clears the content of the chat window. This command is aliased to <b>Crtl-L</b></p>
+       
+<h3><a name="help">/help</a> [<i>command-name</i>]</h3>
+         
+<p>Show this web page, optionally starting at the description of the specified
+  commands  </p>
+       
+<h3><a name="exit">/exit</a> [<i>message</i>]</h3>
+         
+<p>Exit the Circle. If anyone is watching you, they will see the message,
+  if given.  </p>
+       
+<h3><a name="logout">/logout</a> [<i>message</i>]</h3>
+         
+<p>Log out, but don't close the Circle window.  </p>
+       
+<h3><a name="stats">/stats [-p | --profile]</a></h3>
+         
+<p>Report network usage and number of peers.  </p>
+       
+<p>If `<samp>-p</samp>' or `<samp>--profile</samp>' is given, then give an
+  itemized account of network usage. This is for people who are interested
+ in modifying Circle to use less bandwidth. Thus, the figures don't necessarily
+  make much sense without reading the source code.  </p>
+       
+<p>The given summary figure is a sum of data sent &amp; received. The `direct
+  recvfrom' item of `<samp>/stats --profile</samp>' represents amount received; 
+  the rest are the components in sent data.  </p>
+       
+<p>`hdl msg' items represent the total size of replies to the given request
+  type. `<samp>grep "def handle(" *.py</samp>' shows the places where these
+  replies are generated.  Most requests belong to node.py (see <code>perform_standard_request</code>). 
+  The return value of <code><var>Whatever</var>.handle</code> is what gets
+  sent (after being picked in node.py:handle_message).  </p>
+       
+<p>`send msg' items can usually be found with `<samp>grep "call.*<var>message</var>"
+  *.py</samp>'. (Also for finding the triggers of `hdl msg <var>message</var>'
+  traffic.)  </p>
+       
+<p>At the time of writing, the `glob' messages aren't broken down into their 
+  components in the network profile.   </p>
+       
+<h2><br>
+    </h2>
+       
+<h2><a name="chat"></a>Chat related commands:</h2>
+          
+<p>These are kind of like IRC commands, and, well, kind of not.  </p>
+       
+<h3><a name="msg">/msg</a> <i>nick/channel</i>[<i>,nick/channel...</i>]<i>
+  message</i></h3>
+         
+<p>Send a message to a person or people.  </p>
+       
+<p>Eg:</p>
+       
+<pre>      /msg pfh,#arvotea wassup?</pre>
+          
+<h3><a name="join">/join</a> [+ or -] <i>nick/channel</i>[<i>,nick/channel...</i>]</h3>
+         
+<p>Treat all non-commands as messages to the list of people or channels. 
+ </p>
+       
+<p>If a + or - is put in front of the list, respectively add or subtract
+the people or channels to the list.  </p>
+       
+<p>Eg:</p>
+       
+<pre>      /join bob,tony,#buffy<br>      /join - tony<br>      /join + sam,tracy</pre>
+          
+<h3><a name="listen">/listen</a> [+ or -] <i>channel</i>[<i>,channel...</i>]</h3>
+         
+<p>Modify the list of channels you are listening to.  </p>
+       
+<p>Eg:</p>
+       
+<pre>      /listen #welcome<br>      /listen - #trek<br>      /listen + #buffy</pre>
+          
+<p>To list the channels you are currently listening to, type  </p>
+       
+<pre>      /listen</pre>
+          
+<h3><a name="who">/who [#channel]</a></h3>
+         
+<p>List watched people who are currently online, or people currently
+listening to a channel.  </p>
+       
+<h3><a name="quiet">/quiet</a> [<i>activity</i>]</h3>
+         
+<p>Toggle quietness. When you are quiet, messages are not displayed but instead
+  stored for later, and the sender of the message will be told that you are
+  quiet.  </p>
+       
+<p>Eg:</p>
+       
+<pre>      /quiet working</pre>
+          
+<h3><a name="read">/read</a></h3>
+         
+<p>Read messages received while you were quiet.  </p>
+       
+<h3><a name="me">/me</a> [<i>activity</i>]</h3>
+         
+<p>Specify what you are currently doing. When someone sends you a message,
+or "/look"s at you they will be told what you are doing. (Note that this
+differs from the IRC meaning of /me.)  </p>
+       
+<p>Eg:</p>
+       
+<pre>      /me is avoiding his phd</pre>
+          
+<h3><a name="look">/look</a> [<i>nick</i>]</h3>
+         
+<p>See what other people are doing. You can look at a specific person by
+specifying their nick. If you don't specify a nick, it will print out what
+everyone in your watch list is doing.  </p>
+       
+<h3><a name="give">/give</a> <i>file</i> [<i>message</i>] <br>
+    /give !<i>python_expression</i> [<i>message</i>]</h3>
+         
+<p>Give a reference to a file, or the result of a python expression to the 
+  people you have "/join"ed.  </p>
+       
+<p>If it is a file, the recipients will be able to download it using the
+"/take" command.  </p>
+       
+<p>If it is a python expression, the expression should not contain any spaces. 
+   </p>
+       
+<h3><a name="giveto">/giveto</a> <i>nick</i>[<i>,nick...</i>] <i>file</i>
+  [<i>message</i>] <br>
+    /giveto <i>nick</i>[<i>,nick...</i>] !<i>python_expression</i> [<i>message</i>]</h3>
+         
+<p>Like "/give", but to a person or people other than those you have "/join"ed. 
+   </p>
+       
+<h3><a name="take">/take</a> [<i>reference</i>]</h3>
+         
+<p>Download a reference that someone has "/give"n you.  </p>
+       
+<h3><a name="say">/say</a> <i>message</i></h3>
+         
+<p>Like typing <i>message</i> by itself, except without trying to parse <i>message</i>
+  as a command.  </p>
+       
+<p>(Useful for the rare occasions when you want to say something beginning
+  with `<samp>/</samp>' or `<samp>!</samp>'.)  </p>
+       
+<h3><a name="repeat">/repeat</a> <i>n</i></h3>
+         
+<p>Repeat the last <i>n</i> messages you received.  </p>
+       
+<h3><a name="recall">/recall</a></h3>
+         
+<p>Recall the last message you sent.  </p>
+       
+<p>This only works for messages sent to people who aren't currently online.<br>
+    <br>
+    <br>
+      </p>
+       
+<p>  </p>
+       
+<h3><a name="find">/find</a> [<i> -options </i> ]  [ nickname]</h3>
+
+          
+<p>/find searches for people.  Search results are diplayed in a list.<br>
+    You may add listed people to your contact list using <tt>/add</tt>.</p>
+           
+<p>Available options are: </p>
+       
+<ul>
+     <li>-o, --online: Search for people that are online </li>
+     <li>-n : number results (default in text mode) </li>
+     <li>-u : display IP addresses </li>
+       
+</ul>
+               
+<p>Examples:</p>
+       
+<pre>      
+/find bob<br>      
+/find --online tony<br>      
+</pre>
+           
+<p>Type just <tt>/find</tt> to list all people online.  </p>
+       
+       
+<p>  </p>
+       
+<h3><a name="remember">/remember</a> <i>nickname</i></h3>
+         
+<p>Add a person to your contact list.  </p>
+
+<h3><a name="forget">/forget</a> <i>nickname</i></h3>
+         
+<p>Remove a person from your contact list.  </p>
+       
+<h3><a name="set">/set</a> [<i>parameter value</i>]</h3>
+          
+<p>Set a configuration parameter. <tt>/set</tt> on its own will display your
+  current configuration.  </p>
+       
+<p>Available parameters are: </p>
+       
+<ul>
+     <li>username: a short name which people can use to refer to you </li>
+     <li>name: your actual name </li>
+     <li>finger: a description of yourself that people can view </li>
+       
+</ul>
+          
+<p>Examples:</p>
+       
+<pre>      /set<br>      /set name John Smith<br><br><br><br></pre>
+          
+<h2> </h2>
+     
+<h2><a name="files"></a>File sharing commands:</h2>
+        
+<h3><a name="search">/search</a> [<i>keywords</i>]</h3>
+         
+<p>
+/search searches the network for files.<br>
+Results are diplayed in a list.</p>
+          
+<p> 
+You may download listed files with <tt>/get</tt> or <tt>/play</tt> <br>
+In the GUI mode, you may also click on them.<br>
+</p>
+          
+<p>Available options are: </p>
+       
+<ul>
+    <li>-a : Search for audio files </li>
+    <li>-i : Search for images </li>
+    <li>-v : Search for video files </li>
+    <li>-l : Search for local files </li>
+    <li>-r : Search for remote files </li>
+    <li>-n : do not number results </li>
+    <li>-u : display URLs </li>       
+</ul>
+
+<p>Examples:</p>
+<pre>     /search mozart
+     /search -a mozart
+     /search mozart mp3
+</pre>
+           
+<h3><a name="get">/get</a> <i>filename</i> | all</h3>
+
+<p>
+The <tt>/get</tt> command downloads files found with <tt>/search</tt> or with <tt>/ls</tt>. <br>
+Type <tt>/get </tt><i>n</i> to download the n-th file of the list.<br>
+Type <tt> /get all </tt> to download the whole list. This is useful if you want to download a whole directory.</p>
+
+<h3><a name="play">/play</a> <i>filename</i> </h3>
+
+<p>
+<tt>/play</tt> plays a file listed with <tt>/search</tt> or with <tt>/ls</tt>. <br>
+       
+<h3><a name="ls">/ls</a> [options] [nickname:path] [keywords]</h3>
+       
+<p>
+<tt>/ls</tt> lists the files published in a directory.<br>
+Typing only <tt>/ls</tt> lists your locally published files.<br>
+Adding a nickname followed by a colon lists somebody else's files.<br>
+<tt>/ls</tt> uses the same options as <tt>/search</tt> <br>
+</p>
+Examples:<br>
+
+<pre>    /ls -a avalon
+    /ls thomas:
+    /ls thomas:/music/
+    /ls :/music/mozart/ ogg
+</pre>
+       
+<h2><a name="gossip-commands"></a>Gossip related commands:</h2>
+          
+<h3><a name="gossip">/gossip</a></h3>
+         
+<p>Fetch and show the latest gossip.  </p>
+       
+<h3><a name="post">/post</a></h3>
+         
+<p>Open a window to compose a new item of gossip.<br>
+    </p>
+       
+<h2><a name="shell">Shell commands:</a></h2>
+          
+<p>You can execute shell commands if you preface them with a double slash
+  ("//"). For example:  </p>
+       
+<pre>      //ls</pre>
+          
+<p>The command can be interactive (i.e. prompt for values), but there is no
+terminal emulation, so things like vi or emacs wont work.  </p>
+       
+<p>This just happens to be sufficient to use the "goofey" chat program popular
+  at Monash University. For example:  </p>
+       
+<pre>      //goofey<br>      //goofey -s pfh<br>      &gt; hi!</pre>
+           
+<h2><a name="python"></a>Python commands:</h2>
+          
+<p>You can execute arbitrary Python commands if you preface them with an
+exclamation mark ("!"). There are two predefined variables: <b>app</b> is
+the application object, and <b>node</b> is the network node object. Eg: 
+</p>
+       
+<pre>      !node.call_p_success</pre>
+          
+<p>Backslashes at the end of lines will be removed before the expression is
+passed to the python interpreter, allowing multi-line python statements.
+  Eg:  </p>
+       
+<pre>      !for item in node.link_states.values(): \<br>          print item.round_trip</pre>
+          
+<h2><a name="multiple"></a>Commands with multiple lines:</h2>
+          
+<p>Commands can contain multiple lines. Put a "\" character at the end of
+  each non-final line, eg:  </p>
+       
+<pre>      /msg pfh\<br>      Hello Paul\<br>      How are you today?</pre>
+      <br>
+    <br>
+    <br>
+ <br>
+</body>
+</html>

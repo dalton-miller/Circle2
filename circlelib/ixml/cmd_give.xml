@@ -1,0 +1,10 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_give.xml">give</link>
+Syntax: 
+  /give file [message]
+  /give !python_expression [message]
+
+Give a reference to a file, or the result of a python expression to the people you have <link path="ixml/cmd_join.xml">/join</link>ed.
+
+If it is a file, the recipients will be able to download it using the <link path="ixml/cmd_take.xml">/take</link> command.
+If it is a python expression, the expression should not contain any spaces.
+

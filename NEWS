@@ -1,0 +1,265 @@
+User-visible Changes
+====================
+
+0.41 - Bug reports are sent to #traceback
+       Improved help system, XML
+       Dialog for downloading directories
+
+0.40 - Big changes to the GUI [thomasV]
+
+0.39 - Separation daemon/interface [thomasV]
+          The node runs in a daemon. 
+          The commands 'circled' and 'circleget', 
+          have been replaced by options to 'circle' 
+       Files can be renamed in chat window (right click) [thomasV]
+       Messages or commands can be postponed with Ctrl-O [thomasV]
+
+0.38 - Lightweight threads based on generators [thomasV]
+       Telephony plugin for gnomemeeting [rodrigo]
+
+0.37 - Digital rights management uses a private directory [thomasV]
+       Local & remote options for /search [thomasV]
+       Tips on startup. [thomasV]
+       Display status changes of watched people. [thomasV]
+       /who can list the subscribers to a channel [thomasV]
+       Redundancy is enforced for cached data [thomasV]
+
+0.36 - New chat commands: /search, /get, /play and /ls  [thomasV]
+       Right click on files and persons in chat window [thomasV]
+       Playlist [thomasV]
+       Colors can be modified in options [thomasV]
+       Circle urls received in a chat message are parsed on the fly [thomasV]
+       Queries can have negative keywords, eg "A and not B" [thomasV]
+       Can download and play directories [thomasV]
+       Terminal-like auto-completion with the tabulation [thomasV]
+       Do not need to /add people before you can talk to them [thomasV]
+       Important rewrite of the file categorisation (magic) [ThomasM]
+       Color text based on typing intensity [pfh]
+       Paranoid policy option for file sharing [thomasV]
+
+0.35 - GTK2, many interface enhancements [njh/pfh]
+       Development moved to Savannah
+       Number of recipents for channel message now correct [thomasV]
+       Daemon can now publish apt cache
+       More accurate download speed
+       Parallelized and fixed boot up phase
+       HTTP interface to daemon [thomasV]
+
+0.34a - Put magic caches in config directory, so installed version works [pfh]
+
+0.34 - Node optimization: [ryan/pfh]
+         "store link" is now O(log(len(node.links)))
+	 check_invar called every 5 minutes in poll_task, rather than for each
+	   add_peer, etc
+
+0.33 - Added menu option to connect to known_peers.  [jiri]
+       ryan attempts to take revenge on thomasV for adding so many features
+        in 0.32.  The attempt is almost foiled by thomasV starting work on
+        a whiteboard facility.
+       Correctly report & store timestamps from clients running on different
+        operating systems.  [ryan]
+       Robustness: more checking on values received over the network or read
+        from config files.  [ryan]
+       Suggest `/say ...' in response to an unrecognized `/' command
+        (e.g. if the user unthinkingly types `/usr/bin/blah') and similarly
+        for `!...' commands that generate an exception.  [ryan]
+       Don't truncate multi-line msgs to the first line when adding to the
+        history.  [ryan]
+       Various improvements to diagnosis of deadlocks.  [ryan]
+       For `/read' and `/repeat', make more of an attempt to show messages in
+        order of time.  (Doesn't help normal chat though.)  [ryan]
+       Lots more consistency checking and proofs in the source code.  Bugs are
+        now written to stderr instead of just throwing an exception that might
+        be silently ignored.  Please report any displayed bugs!  [ryan]
+       Improvements to download speed/time estimation & display.  [ryan]
+       For key generation, don't waste as much randomness from the
+        cryptographic random source.  [ryan]
+       Added mime information to all file [ThomasM]
+       Content of the file command added to the keyword [ThomasM]
+       Faster shut-down for people with many files.  [ryan]
+       Search for files in the Overnet network [thomasV]
+
+0.32 - Don't put empty commands in the history [jiri, idea thomasV]
+       eDonkey connection information is displayed in the chat window [thomasV]
+       eDonkey client and serverlist are downloaded by http [thomasV]
+       Download manager displays a (bad) estimate of remaining time.  [thomasV]
+       Gossip titles are clickable in the chat window [thomasV]
+       eDonkey connection information is clickable in the chat window [thomasV]
+       Clickable URLs in the chat window [thomasV]
+
+0.31 - Dumb bug in node_monitor removed (not refering to check properly)
+       Fixed A bug in introduced in 0.30 the proxy code
+       Add support for searching eDonkey for files.  [thomasV]
+       Pop-up menu in contact list.  [jiri]
+       New command `/clear' to discard chat history (and more importantly the
+        widgets associated with each message).  Useful if you like to keep
+        circle open for long periods at a time and get lots of messages.  [thomasV]
+       For new users, get a default human name from getpwent() (/etc/passwd).
+       Save configuration file even in text mode.  [ryan]
+       Use /dev/random if it is available.  [ryan]
+       Make ps,gtk signatures produce same results.  [njh]
+       Can disable beep-on-new-message.  [njh]
+       Can disable auto-list of new channels.  [saf2]
+       Chat messages are sent in parallel.  [thomasV]
+       Download manager displays file size and speed.  [thomasV]
+
+0.30 - Unicode safe (following versions will have unicode support)
+       Refactoring and code cleanup begun
+       Nasty deadlock in node resolved
+       Bug in call error detection removed
+       Cached messages put on unread list rather than immediately displayed
+       Apt methods parallelized, faster
+       Less UDP retries on hashtable shutdown
+       Indentation changed
+
+0.29a - Dumb bug in search.py removed
+
+0.29 - See what timezone a person is in
+       /quit command removed (too similar to /quiet, use /exit)
+       Drop all links to a peer on ICMP error packet
+       The md5sum part of `circle-file:...' URLs can now be specified
+         either in the way that the `md5sum' program represents them
+         or in the shorter representation that Circle usually uses.
+         So if you know an md5sum from a software announcement, then you
+         can search for the md5sum directly without relying on name
+         lookup.
+       circleget added
+       Apt methods cftp and chttp added
+       Option to publish apt cache added
+       Network monitor now also monitors outgoing traffic
+
+0.28 - Require Python 2 or higher
+       Hashtable only activates on nodes with reasonable ping times
+       Download manager added
+       Correctly inform of status on connect
+       Avoid overflow of network usage using longs (!)
+       /give now properly private, faster
+       Plug-in interface improved
+       Progressive directory scan
+
+0.27 - Search for people who aren't online
+       search.py refactored
+       Prevent a gossip showing up multiple times in list
+       Tooltips disappear properly in win32
+       Main window redraws properly in win32 (hopefully)
+       Search windows flicker less, don't jump around so much
+       Data cache was publishing with redundancy 1 (oops), changed to 4
+       Proxy connection now unbuffered at both ends
+       Error handling in proxy improved
+       Ctrl-D toggles shell in text mode
+       Allow spaces in directory names
+
+0.26a - Stupid bug in proxy
+        Channels now shown in lovely blue
+
+0.26 - -p flag simply forces prompting for proxy
+       Disabled path MTU discovery under Linux
+       Limit number of running threads
+       Eliminated polling tasks in file_server, name_server and gossip
+       Debian packaging done.
+       name_server_add_watcher_task no longer holds the name_server lock during a call
+
+0.25 - Text mode interface
+       Added /repeat command
+       No longer shows incoming messages while quiet
+       Downloader searches for new sources while downloading
+       Delayed hashtable activation
+       Faster connection to network
+       Channels were broken for several versions (!), now fixed
+
+0.24 - Changed GTK-win32 threading workaround -- no longer slows down... maybe
+       Added a workaround for GTK-win32 crashing on non-ASCII chars
+       Signatures exportable as postscript
+       Proxy now uses port 29610
+       Proxy now crashes slightly more elegantly
+       Added icon for Windows executable
+
+0.23 - Faster channel message sending
+       Changes to mp3 player
+       Multiple public directories
+       Tree browsing of peoples' files
+       Network monitor
+       FAQ added
+
+0.22 - Bugfix in node, should be much more reliable
+       Fixed typo in initial peers
+
+0.21 - Channel support
+       Bugfix in color allocation
+       Bugfix in gossip distance calculation
+       Bugfix in data cache
+       More compact message formatting
+       Join displayed in prompt
+       Windows proxy now works
+
+0.20 - Bugfix in chat
+       /post and /gossip commands
+       Hopefully more robust proxy
+       Initial Windows support
+
+0.19 - Bugfixes in node, chat
+       More efficient use of threading in node
+       Doesn't crash on Windows, but doesn't work too good either
+
+0.18 - Bugfixes in Node peer discovery
+       Topics and reply in gossip
+       Image viewer and Ogg player added
+       Number of unread messages displayed in title when window minimized
+       No more duplicate off-line messages
+       "Today's hot gossip" now only lists unread gossip items
+       BSD support
+
+0.17 - No longer signs anonymous gossip (oopsie)
+       Bugfixes to chat, cache, name server
+
+0.16 - Better handover
+       Send message defaults to cache message rather than error
+
+0.15 - Shell commands (allows you to run goofey from circle)
+       History
+       Colored prompt
+
+0.14 - Braindead bug not unlocking an acquaintance removed
+
+0.13 - Numerous improvements and bug fixes including
+       - njh's mp3 player
+       - windows larger than 2 packets
+       - /logout, automatic proxy prompting
+
+0.12 - Moved to CVS, numerous changes
+
+0.11 - `/quit' as synonym for `/exit'.
+       `/say' command à la IRC (for saying things beginning with `/' or `!').
+       Daemonic mode (circled)
+       Ability to start a proxy on a firewall (for masquerading networks)
+       Improved gossip
+       Improved link_state
+
+0.10 - New, more scalable node (does not work with previous versions)
+       Better file manager
+       Better gossip display
+       `/exit' command
+
+0.9  - Various bug fixes
+       Prevents people from accidentally logging in twice
+
+0.8  - Minimal gossip module added
+
+0.7  - Various improvements including:
+       - More finger type information
+       - Serialized socket operations (to work with socksify)
+
+0.6  - Numerous improvements, including:
+       - network saturation avoidance
+       - receiving ICMP errors
+       - chat capability
+
+0.5  - Bugfixes
+
+0.4  - Wrote my own pickle, should now be fairly unhackable
+
+0.3  - Slight change to protocol to make peers usable with masquerading
+
+0.2  - Now displays network usage
+
+0.1  - Initial release

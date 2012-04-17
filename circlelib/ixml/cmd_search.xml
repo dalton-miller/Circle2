@@ -1,0 +1,22 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_search.xml">search</link>
+
+Syntax: /search [keywords]
+
+/search searches the network for files. Results are diplayed in a list.
+
+You may download listed files with <link path="ixml/cmd_get.xml">/get</link> or <link path="ixml/cmd_play.xml">/play</link>. You may also click on them for the same result.
+
+Available options are:
+    -a : Search for audio files
+    -i : Search for images
+    -v : Search for video files
+    -l : Search for local files
+    -r : Search for remote files
+    -n : do not number results
+    -u : display URLs
+
+Examples:
+     <command>/search mozart</command>
+     <command>/search -a mozart</command>
+     <command>/search mozart mp3</command>
+

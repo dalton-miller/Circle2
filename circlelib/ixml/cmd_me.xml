@@ -1,0 +1,9 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_me.xml">me</link>
+
+/me [activity]
+
+Specify what you are currently doing. When someone sends you a message, or "/look"s at you they will be told what you are doing. (Note that this differs from the IRC meaning of /me.)
+
+Eg:
+      /me is avoiding his phd
+

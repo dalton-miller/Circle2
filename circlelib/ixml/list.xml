@@ -1,0 +1,5 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/list.xml">Listing files</link>
+
+Use /ls nickname to browse somebody's files.
+See <link path="ixml/cmd_ls.xml">the help on /ls</link>
+

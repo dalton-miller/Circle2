@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>The Circle: How to use the Circle daemon</title>
+</head>
+<body>
+
+<h1>How to use the Circle daemon</h1>
+
+<p>
+Circle uses a daemon, which connects to the circle network. When you
+type 'circle', a daemon is started if there is none running, and the
+user interface connects to it.
+
+<p>However it is possible to publish files, and to query the Circle
+network, without running the user interface.  To start the daemon,
+type:
+
+<p><b>circle start</b>
+
+<p>You can check the status of the daemon (number of files published,
+network usage, number of known peers) by typing the following:
+
+<p><b>circle status</b>
+
+<p>While the daemon is running, you can use your web browser as an
+interface to Circle. Start the http service of the daemon by typing:
+
+<p><b>circle http [local,remote]</b>
+
+<p>You can search for people by typing:
+
+<p><b>circle find</b> <it>keyword</it>
+
+<p>You can search for files by typing:
+
+<p><b>circle search</b> <it>keyword</it>
+
+<p>You can download a file by typing:
+
+<p><b>circle get</b> <it>url</it> 
+
+<p>You can stop your running daemon by typing:
+
+<p><b>circle stop</b>
+
+<p>You can make the Circle daemon load automatically at boot time: (you have to be root to do this)
+
+<p><b>circle autostart</b>
+
+<p>If you no longer want the daemon to load automatically at boot, simply type:
+
+<p><b>circle noautostart</b>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=The Circle
+Comment=The Circle: file sharing/chat/news
+Exec=circle
+Icon=circle-icon.png
+Terminal=0
+Type=Application
+Categories=Application;Network;

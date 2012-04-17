@@ -1,0 +1,10 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_quiet.xml">quiet</link>
+
+Syntax: 
+     /quiet [activity]
+
+Toggle quietness. When you are quiet, messages are not displayed but instead stored for later, and the sender of the message will be told that you are quiet.
+
+Example:
+      <command>/quiet working</command>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Analysis of Susceptibility to Attack</title>
+<META http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"> SPAN.file { font-family: sans-serif, monospace } </style>
+  </head>
+
+  <body>
+    <h1>Analysis of Susceptibility to Attack</h1>
+
+<h2>Sending attachment objects</h2>
+
+<p>Limited by UDP packet size (64KiB), so can't DoS through memory usage
+with a single sent object; but can by sending <var>n</var> objects
+(for some large <var>n</var>).  Here the attacker is constrained by network;
+need to send many MB over network, so need to use either cheap network or
+someone else's network.
+
+<p>The `trust' measure might be used to reduce this source of DoS:
+giving priority to using memory for things sent by people trusted
+more.
+
+
+<p>Can't send executable code as python object: can only send python
+objects that can be created through <code>safe_pickle.safe_load</code>.
+
+
+<h2>Spoofing: Masquerading as someone More Trusted</h2>
+
+<p>Circle uses a public/private key pair for some things.  [Can
+someone be more specific?  Is every single packet signed and
+signature-checked?]
+
+<p>There is no associated passphrase, so anyone who can access the
+<span class="file">private_key</span> file data can circumvent this
+measure.
+
+<p>Currently the <span class="file">~/.circle</span> directory and
+<span class="file">~/.circle/private_key</span> file are created with
+the default umask; presumably at least <span
+class="file">private_key</span> ought to be chmod'ed to 0600 or 0400.
+
+<p>Even if chmod'ed to 0400, the file can still be accessed by any
+process with either root privilege or access to the device file.  Many
+setuid programs have at some point had a vulnerability allowing access
+to files.
+
+<p>If <span class="file">~/.circle/private_key</span> is
+network-mounted, then even packet-sniffing suffices to see the file.
+
+
+    <hr>
+Mail changes to
+<address><a href="mailto:pmoulder@csse.monash.edu.au">Peter Moulder</a></address>
+(or commit to CVS).
+<!-- Created: Tue Jan  8 14:05:19 EST 2002 -->
+<!-- hhmts start -->
+Last modified: Wed Jan  9 14:10:35 EST 2002
+<!-- hhmts end -->
+  </body>
+</html>

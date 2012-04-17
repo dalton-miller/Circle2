@@ -1,0 +1,6 @@
+Circle plug-ins:
+----------------
+
+In order to activate a plug-in, you need to put 
+the corresponding file in your ~/.circle/plug-ins directory.
+

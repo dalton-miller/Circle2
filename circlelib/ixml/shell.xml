@@ -1,0 +1,7 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/shell.xml">Shell</link>
+
+The Circle provides an advanced terminal.
+To enter/leave the shell type ctrl-D
+While in the shell, you have access to tab-completions through circle.
+
+

@@ -1,0 +1,45 @@
+circle (0.34a-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Peter Moulder <pmoulder@mail.csse.monash.edu.au>  Wed,  6 Nov 2002 21:42:48 +1100
+
+circle (0.33-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Peter Moulder <pmoulder@mail.csse.monash.edu.au>  Sun, 22 Sep 2002 15:24:55 +1000
+
+circle (0.32-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Peter Moulder <pmoulder@mail.csse.monash.edu.au>  Sat, 24 Aug 2002 12:12:02 +1000
+
+circle (0.31-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Peter Moulder <pmoulder@mail.csse.monash.edu.au>  Sun, 11 Aug 2002 18:20:12 +1000
+
+circle (0.30-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fixes node deadlock pb.
+    + Apt methods parallelized, faster.
+    + Cached messages put on unread list rather than immediately displayed
+
+ -- Peter Moulder <pmoulder@mail.csse.monash.edu.au>  Sun, 23 Jun 2002 18:33:00 +1000
+
+circle (0.29-1) unstable; urgency=low
+
+  * New upstream release.  Includes apt methods cftp,chttp.
+
+ -- Peter Moulder <pmoulder@mail.csse.monash.edu.au>  Sat,  1 Jun 2002 20:54:02 +1000
+
+circle (0.25-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Peter Moulder <pmoulder@csse.monash.edu.au>  Sun, 14 Apr 2002 22:03:54 +0100
+

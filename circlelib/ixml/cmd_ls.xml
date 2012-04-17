@@ -1,0 +1,15 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_ls.xml">ls</link>
+
+Syntax: /ls [options] [nickname:path] [keywords]
+
+/ls lists the files published in a directory.
+Typing only /ls lists your locally published files.
+Adding a nickname followed by a colon lists somebody else's files.
+/ls uses the same options as <link path="ixml/cmd_search.xml">/search</link>
+Examples:
+
+    <command>/ls -a .</command>
+    <command>/ls thomas:</command>
+    <command>/ls thomas:/music/</command>
+    <command>/ls :/music/mozart/ ogg</command>
+

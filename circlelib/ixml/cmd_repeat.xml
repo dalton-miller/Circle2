@@ -1,0 +1,5 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_repeat.xml">repeat</link>
+
+Syntax: /repeat n
+
+Repeat the last n messages you received.

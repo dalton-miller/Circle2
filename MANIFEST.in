@@ -1,0 +1,17 @@
+include circle
+include README
+include NEWS
+include COPYING
+include build_py_dist.py
+include circle-icon.png
+include circle.desktop
+include circlelib/magic.circle
+include circlelib/magic.linux
+include debian/*
+include plug-ins/telephony.py
+include circlelib/pixmaps/*
+include circlelib/html/*
+include circlelib/ui_gtk/*
+include circlelib/ui_text/*
+include circlelib/ui_http/*
+include circlelib/ixml/*

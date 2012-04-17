@@ -1,0 +1,634 @@
+# Czech messages for circle
+# Copyright (C) 2002 Jiri Baum <jiri@baum.com.au>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: circle CVS\n"
+"PO-Revision-Date: Wed May 15 16:56:12 2002\n"
+"Last-Translator: Thomas Mangin <thomas.mangin@free.fr>\n"
+"Language-Team: private translation\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Generated-By: pygettext.py 1.1\n"
+
+#: circlelib/circle.py:1486
+msgid "Create a channel"
+msgstr "Ajouter une chaine"
+
+#: circlelib/chat.py:271
+msgid ""
+"\n"
+"Contains attached python object; type `!%s%d' to see."
+msgstr ""
+"\n"
+"Contient un object python attache a voir de type `!%s%d'"
+
+#: circlelib/name_server.py:548
+msgid "Remember this person between sessions"
+msgstr "Se souvenir de cette personne entre deux sessions"
+
+#: circlelib/gossip.py:158
+msgid ""
+"\n"
+"\n"
+"Trust distance:\n"
+"(this is an anonymous post, you can help make it harder to track by reducing "
+"its distance)"
+msgstr ""
+"\n"
+"\n"
+"Indice de confiance:\n"
+"(Ce message est annonyme, vous pouvez reduire sa visibilite en reduisant "
+"son indice de confiance)."
+
+#: circlelib/settings.py:115
+msgid "Look ma! No control points!"
+msgstr "Vois ca! Pas de 'control points'"
+
+#: circlelib/name_server.py:448
+msgid ""
+"\n"
+"Their current time is %I:%M %p"
+msgstr ""
+"\n"
+"L'heure locale est %H:%M"
+
+#: circlelib/circle.py:862
+msgid ""
+"This is a graphical representation of your public key. People can use it to "
+"check that you are really you and not an imposter when they search for you.\n"
+"\n"
+"If you, say, put this on your web-page, people will be able to confirm that "
+"they are talking to the person who made that web-page on circle.\n"
+"\n"
+"Click on the picture to generate a postscript version for printing or "
+"putting on teeshirts (Linux and BSD only).\n"
+"\n"
+"Note: you would only bother doing this if you are a security nut."
+msgstr ""
+"Ce dessin est une reprensatation graphique de votre clef publique qui peut"
+"etre utilise afin de vous indentifier facilement.\n"
+"\n"
+"Vous pouvez la publier sur votre site web afin de permettre a vos "
+"interlocuteurs de vous identifier."
+"\n"
+"Cliquez sur cette image pour generer une version postscript que vous pourrez "
+"imprimer ou arborer sur un tee-shirt.\n"
+"\n"
+"Note: Cette option est la pour les fou de securite, et seulement eux."
+
+#: circlelib/name_server.py:110 circlelib/name_server.py:131
+#: circlelib/name_server.py:138 circlelib/name_server.py:151
+msgid "Please bang on the keyboard like a monkey."
+msgstr "Tapez sur le clavier comme un singe."
+
+#: circlelib/search.py:486
+msgid "Subscribe"
+msgstr "Inscription"
+
+#: circlelib/chat.py:1418
+msgid "Could not fork.\n"
+msgstr "Impossible de dupliquer (fork) le programme.\n"
+
+#: circlelib/search.py:171
+msgid "People matching: "
+msgstr "Personne repondant aux criteres de selection: "
+
+#: circlelib/name_server.py:443 circlelib/search.py:408
+msgid "Username: "
+msgstr "Nom: "
+
+#: circlelib/node_monitor.py:164
+msgid "Network usage so far: "
+msgstr "Bande passante utilise jusqu'a present: "
+
+#: circlelib/circle.py:621
+msgid "Password:"
+msgstr "Mot de passe:"
+
+#: circlelib/circle.py:1153
+msgid "Log out"
+msgstr "Deconnection"
+
+#: circlelib/chat.py:126
+msgid " could not be contacted.\n"
+msgstr " est injoingnable.\n"
+
+#: circlelib/chat.py:314
+msgid "Bad message received from "
+msgstr "Message invalide recu de "
+
+#: circlelib/circle.py:885
+msgid "Please select your public directory."
+msgstr "Choisissez votre repertoire publique."
+
+#: circlelib/chat.py:596
+msgid " just arrived.\n"
+msgstr " est arrive.\n"
+
+#: circlelib/search.py:505
+msgid "Bad datum"
+msgstr "Bad datum (Date invalide ??)"
+
+#: circlelib/search.py:433
+msgid "View"
+msgstr "Voir"
+
+#: circlelib/chat_commands.py:393
+msgid "/add requires a number (ie a result from /find)."
+msgstr "/add necessite un nombre (un resultat obtenu avec /find)."
+
+#: circlelib/chat.py:833
+msgid "You have unread messages. Type /read to read them.\n"
+msgstr "Vous avez des messages non-lu. utilisez /read pour les voir.\n"
+
+#: circlelib/name_server.py:1113
+msgid "no address"
+msgstr "aucune addresse"
+
+#: circlelib/chat.py:830
+msgid "What you are doing %s"
+msgstr "Ce que vous faites %s"
+
+#: circlelib/circle.py:508
+msgid ""
+"Passing on this peer's obligations.\n"
+"\n"
+msgstr ""
+"Ce noeud passe ses informations au cercle.\n"
+"\n"
+
+#: circlelib/search.py:454
+msgid "Daemon at %s"
+msgstr "Demon present en %s"
+
+#: circlelib/name_server.py:1087
+msgid "Authenticating"
+msgstr "Verification de votre identite"
+
+#: circlelib/circle.py:599
+msgid "PuTTY session name:"
+msgstr "Nom de session PUTTY:"
+
+#: circlelib/chat_commands.py:423
+msgid "%s is not in your contact list.\n"
+msgstr "%s n'est pas dans votre liste de contacts.\n"
+
+#: circlelib/search.py:476
+msgid "%d subscribers on-line."
+msgstr "%d utilisateurs en ligne"
+
+#: circlelib/settings.py:109
+msgid "Circle Chat will be even more fun once all your friends are on it..."
+msgstr "Plus on est de fou, plus on ri. Invitez vos ami sur circle ..."
+
+#: circlelib/circle.py:1426
+msgid "Address of peer to connect to:                           "
+msgstr "Adresse du noeux auquel vous voulez vous connecter:     "
+
+# what the hell is a wodge? :-)
+#: circlelib/gossip.py:405
+msgid "No such wodge."
+msgstr "No such wodge."
+
+#: circlelib/circle.py:821
+msgid "Username:"
+msgstr "Nom"
+
+#: circlelib/search.py:519
+msgid "   Title: "
+msgstr "   Titre: "
+
+#: circlelib/circle.py:607
+msgid ""
+"You appear to be using a masquerading network.\n"
+"\n"
+"Circle needs to run a proxy on your firewall in order to work correctly. For "
+"this you need to have installed ssh and python on your firewall.\n"
+"\n"
+"Give the hostname or username@hostname (as in ssh) for your firewall in the "
+"box below then click \"log in\" to start the proxy."
+msgstr ""
+"Vous etes derriere un pare-feu avec translation d'adresse (NAT).\n"
+"\n"
+"Circle a besoin d'une adresse de l'espace publique d'Internet. Afin de vous "
+"connecter, vous avez besoin de ssh et python sur une machine accessible\n"
+"par tous les autres noeux.\n"
+"\n"
+"Entrez le nom de la machine ou de votre compte utilisateur@machine (a la ssh) "
+
+#: circlelib/circle.py:1174
+msgid "About"
+msgstr "A propos"
+
+#: circle:112
+msgid "The text mode version currently doesn't support the proxy."
+msgstr "La version texte ne comporte pas l'utilisation d'un proxy."
+
+#: circlelib/channels.py:175
+msgid "channel"
+msgstr "chaine"
+
+#: circlelib/circle.py:904
+msgid ""
+"Make /var/cache/apt/archives public.\n"
+"\n"
+"This will let people use your cached Debian packages, if they use the Circle "
+"apt methods, reducing the load on official Debian servers."
+msgstr ""
+"Rendez /var/cache/apt/archives publique.\n"
+"\n"
+"Cela permettra aux utilisateur de Debian d'utiliser vos paquets si ils "
+"utilisent Circle apt, Ce qui reduit la charge sur les serveurs Debian"
+
+#: circlelib/name_server.py:663
+msgid "%d peers holding your offline presence."
+msgstr "%d noeux pense toujours que vous n'etes pas en ligne."
+
+#: circlelib/circle.py:1494
+msgid "Name of channel to create:     "
+msgstr "Nom de la chaine a creer:     "
+
+#: circlelib/gossip.py:512
+msgid "Text:"
+msgstr "Texte:"
+
+#: circlelib/search.py:528
+msgid "URL: "
+msgstr "URL: "
+
+#: circlelib/settings.py:112
+msgid "Share and enjoy :-)"
+msgstr "Partagez et appreciez :-)"
+
+#: circlelib/name_server.py:374
+msgid "Bad signature."
+msgstr "Mauvaise signature."
+
+#: circlelib/chat_commands.py:228
+msgid "Problem: "
+msgstr "Probleme: "
+
+#: circlelib/search.py:435
+msgid "Add to contact list"
+msgstr "Ajouter un contact"
+
+#: circlelib/name_server.py:175
+msgid "Error in RSA."
+msgstr "Probleme avec RSA."
+
+#: circlelib/name_server.py:993
+msgid "Reconnecting from different machine"
+msgstr "Reconnection depuis une machine differente"
+
+#: circlelib/name_server.py:520
+msgid " View postings "
+msgstr " Voir les annonces "
+
+#: circlelib/chat_commands.py:105
+msgid "Not joined to %s\n"
+msgstr "Vous n'etes pas present sur %s\n"
+
+#: circlelib/chat.py:705
+msgid "Retrieving any messages sent while you were offline...\n"
+msgstr "Collecte les messages que vous avez recus alors que vous etiez absent\n"
+
+#: circlelib/settings.py:103
+msgid "Of very occasional interest."
+msgstr "Sans interret real."
+
+#: circlelib/chat_commands.py:226
+msgid "Download of %s started.\n"
+msgstr "Le telechargement de %s a commence.\n"
+
+#: circlelib/circle.py:1362
+msgid "show/hide menu"
+msgstr "montrer/cacher le menu"
+
+#: circlelib/circle.py:1173
+msgid "Homepage"
+msgstr "Page Web"
+
+#: circle:118
+msgid "Bug: gtk has been loaded somehow."
+msgstr "BUG: Impossible d'initialiser GTK plus d'une fois."
+
+#: circlelib/chat_commands.py:160
+msgid "Error:\n"
+msgstr "Erreur:\n"
+
+#: circlelib/circle.py:894
+msgid ""
+"Please select your download directory.\n"
+"\n"
+"Note: This directory is also public."
+msgstr ""
+"Choisissez le repertoire de reception des telechargements (publique).\n"
+"\n"
+"Note: Ce repertoire peut etre consulté par les autres utilisateurs."
+
+#: circlelib/chat.py:909
+msgid ""
+"/%s requires at least %d parameters.\n"
+"Type /help for help on command usage."
+msgstr ""
+"/%s a besoin de %d parametre(s)\n"
+"Tapez /help pour plus d'aide."
+
+#: circlelib/search.py:181
+msgid "All channels"
+msgstr "Toutes les chaines"
+
+#: circlelib/circle.py:705
+msgid "You appear to be using a masquerading network."
+msgstr "Il semble que vous utilisez des adresse de reseau local."
+
+#: circlelib/circle.py:888
+msgid "Download directory (also public):"
+msgstr "repertoire de reception des telechargements (publique):"
+
+#: circlelib/circle.py:313
+msgid ""
+"  Connected to %d peers\n"
+"  Total network usage %s"
+msgstr ""
+"  Connecte a %d autre noeux\n"
+"  Utilisation totale de bande passante %s"
+
+#: circlelib/chat_commands.py:414
+msgid "%s has been added to your contact list.\n"
+msgstr "%s est ajoute a votre liste de contacts.\n"
+
+#: circlelib/search.py:714
+msgid ": couldn't find anything, sorry"
+msgstr ": aucun resultat, desole."
+
+#: circlelib/chat_commands.py:430
+msgid "%s has been removed from your contact list.\n"
+msgstr "%s a ete enleve de votre liste de contacts.\n"
+
+#: circlelib/circle.py:706
+msgid "This isn't currently supported in the text mode version, sorry."
+msgstr "Cette facilite n'est pas presente en mode texte."
+
+#: circlelib/gossip.py:513
+msgid ""
+"Your actual post.\n"
+"\n"
+"Your text will be formatted automatically, so you don't need to press enter "
+"at the end of each line. Also, people will be able to click on any URLs in "
+"the text."
+msgstr ""
+"Votre annonce.\n"
+"\n"
+"Le corps du texte sera automatiquement mis en page, vous n'avez pas besoin "
+"d'entrer de caracteres de fin de ligne. De meme les URL deviendront des "
+"liens automatiquement."
+
+#: circlelib/circle.py:697
+msgid ""
+"To operate correctly, Circle needs to start a proxy on your firewall.\n"
+"\n"
+"Please give the hostname or address of your firewall."
+msgstr ""
+"Afin de fonctionner correctement, Circle a besoin d'une proxy.\n"
+""
+"Entrez l' adresse IP ou le nom de la machine qui agira comme proxy."
+
+#: circlelib/settings.py:114
+msgid "Now leaving the Other Plane."
+msgstr "Quittons ce monde de fou."
+
+#: circlelib/search.py:413
+msgid "Location: "
+msgstr "Location: "
+
+#: circlelib/chat.py:1474
+msgid "listen to channel %s"
+msgstr "ecouter la chaine %s"
+
+#: circlelib/circle.py:878
+msgid "Public directory:"
+msgstr "Repertoire publique"
+
+#: circlelib/channels.py:169 circlelib/circle.py:912 circlelib/circle.py:1445
+#: circlelib/circle.py:1505 circlelib/gossip.py:601
+#: circlelib/name_server.py:587
+msgid "Cancel"
+msgstr "Annuler"
+
+#: circlelib/circle.py:319
+msgid "Huh?"
+msgstr "Quesko?"
+
+#: circlelib/circle.py:1459
+msgid "Connect"
+msgstr "Joindre"
+
+#: circlelib/name_server.py:96
+msgid "Done"
+msgstr "Fini"
+
+#: circlelib/gossip.py:527
+msgid "An anonymous author wrote that "
+msgstr "Mr. Internet Quidam a ecrit "
+
+#: circlelib/chat_commands.py:110
+msgid "Joined %s\n"
+msgstr "Membre de %s\n"
+
+#: circle:100
+msgid ""
+"circle: unrecognized option `%s'\n"
+"Try `circle --help' for more information.\n"
+msgstr ""
+"circle: option inconnu `%s'\n"
+"`circle --help' pour plus d'information.\n"
+
+#: circlelib/circle.py:1418
+msgid "Connect to peer"
+msgstr "Joindre un noeux"
+
+#: circlelib/chat.py:529
+msgid "Today's hot gossip:\n"
+msgstr "Les ragots du jour:\n"
+
+#: circlelib/chat.py:269
+msgid ""
+"\n"
+"Contains attachment; type `!%s%d' to see its details, `/take %s%d' to "
+"retrieve."
+msgstr ""
+"\n"
+"Contient un attachement de type `!%s%d'. Pour plus d'information, utilisez `/take %s%d' ."
+
+#: circlelib/chat.py:601
+msgid " just left.\n"
+msgstr " nous a quitte.\n"
+
+#: circlelib/name_server.py:545
+msgid "Tell me when this person logs in and out"
+msgstr "Dites moi quand cette personne se connecte ou deconnecte"
+
+#: circlelib/name_server.py:1069
+msgid "There is someone else with the nickname %s"
+msgstr "Le nom %s est deja utilise."
+
+#: circlelib/chat.py:52 circlelib/chat.py:135 circlelib/chat.py:183
+msgid "Sending message...\n"
+msgstr "Envoi du message...\n"
+
+#: circlelib/search.py:470
+msgid "1 subscriber on-line."
+msgstr "1 membre en ligne."
+
+#: circlelib/chat_commands.py:491
+msgid "No configuration item called %s"
+msgstr "Aucune configuration appele  %s existe"
+
+#: circlelib/name_server.py:523
+msgid " View their perspective "
+msgstr " Voir a transver leur yeux "
+
+#: circlelib/settings.py:102
+msgid "Sometimes interesting."
+msgstr "Semble interressant."
+
+#: circlelib/circle.py:885
+msgid "Public directory"
+msgstr "Repertoire publique"
+
+#: circlelib/search.py:519
+msgid "   Album: "
+msgstr "   Album: "
+
+#: circlelib/search.py:336
+msgid "unknown type"
+msgstr "type inconnu"
+
+#: circlelib/circle.py:894
+msgid "Download directory"
+msgstr "Telecharger le repertoire"
+
+#: circlelib/gossip.py:123
+msgid "Topics: "
+msgstr "Sujet: "
+
+#: circlelib/chat_commands.py:190
+msgid "Couldn't SafePickle your object."
+msgstr "Impossible de Sauvergarder (SafePickle) cet objet."
+
+#: circlelib/circle.py:832
+msgid "Real name:"
+msgstr "Nom Reel:"
+
+#: circlelib/chat_commands.py:436
+msgid "/repeat requires a number."
+msgstr "/repeat a besoin d'un nombre."
+
+#: circlelib/circle.py:1148
+msgid "Connect to peer..."
+msgstr "Se connecte a un noeu..."
+
+#: circlelib/gossip.py:440
+msgid "Please specify some topics."
+msgstr "Choissez un sujet SVP."
+
+#: circlelib/chat.py:1174
+msgid ""
+"Current working directory was not saved.\n"
+"Suggest adding `circle -s` to your shell prompt (see /help).\n"
+msgstr ""
+"Le repertoire courant n'a pas ete sauvegarde.\n"
+"Suggestion: utilisez `circle -s` pour lancer circle (voir /help).\n"
+
+#: circlelib/chat.py:203
+msgid "Could not store message for "
+msgstr "Echec de la sauvegarde du message pour "
+
+#: circlelib/circle.py:739
+msgid "Couldn't find any peers, exiting."
+msgstr "Aucun autre noeux trouve, l'application va fermer."
+
+#: circlelib/circle.py:1474
+msgid "Current peers"
+msgstr "Noeux connus"
+
+#: circlelib/chat.py:823
+msgid "You are quiet.\n"
+msgstr "Vous etes en mode `quiet`.\n"
+
+#: circlelib/circle.py:1601
+msgid "Files matching url"
+msgstr "Fichier avec l'URL"
+
+#: circlelib/circle.py:819
+msgid "Identity"
+msgstr "Identite"
+
+#: circlelib/chat.py:1496
+msgid "talk on %s"
+msgstr "parle en %s"
+
+#: circlelib/name_server.py:1024 circlelib/name_server.py:1051
+msgid "I don't know you."
+msgstr "Je ne vous connais pas."
+
+#: circlelib/gossip.py:597
+msgid "Post"
+msgstr "Publier"
+
+#: circlelib/search.py:148
+msgid "Files matching: "
+msgstr "Fichier correspondant: "
+
+#: circlelib/circle.py:528 circlelib/circle.py:773
+msgid "Stopping services..."
+msgstr "Arret des services..."
+
+#: circlelib/circle.py:1013
+msgid "The Circle "
+msgstr "Circle "
+
+#: circlelib/channels.py:155 circlelib/search.py:481
+msgid "Unsubscribe"
+msgstr "Desubsciption"
+
+#: circlelib/chat_commands.py:166 circlelib/chat_commands.py:204
+#: circlelib/chat_commands.py:356 circlelib/chat_commands.py:363
+msgid "This feature does not currently work with the text interface, sorry.\n"
+msgstr "Le mode texte ne permet pas cette action, desole.\n"
+
+#: circlelib/gossip.py:651
+msgid ""
+"To use gossip, you must first nominate some people you trust.\n"
+"\n"
+"Click on the name of someone on your contact list, and tick the \"Trust this "
+"person's gossip\" box."
+msgstr ""
+"Pour utiliser ragots (gossip), vous devez nominer des personne de confiance.\n"
+"\n"
+"Cliquez sur le name de la personne dans votre liste de contact et cochez "
+"la case pour 'Faire confiance a ses ragots'."
+
+#: circlelib/chat.py:182
+msgid "Message sent to %d people on channel %s.\n"
+msgstr "Message envoye a %d personne sure la chaine %s.\n"
+
+#: circlelib/search.py:186
+msgid "People on %s"
+msgstr "Personne en %s"
+
+#: circlelib/chat.py:112 circlelib/chat.py:164
+msgid "unexpected value returned from call"
+msgstr "valeur de retour de fonction non prevu"
+
+#: circlelib/search.py:159
+msgid ""
+"Please specify some keywords to search for.\n"
+"For example, their name or username."
+msgstr ""
+"Entrez les mots clef sur lequel vous voulez baser la recherche.\n"
+"Par exemple, leur nom ou pseudonime."
+

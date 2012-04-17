@@ -1,0 +1,8 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_say.xml">say</link>
+
+/say message
+
+Like typing message by itself, except without trying to parse message as a command.
+
+(Useful for the rare occasions when you want to say something beginning with `/' or `!'.)
+

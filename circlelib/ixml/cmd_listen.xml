@@ -1,0 +1,16 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_listen.xml">listen</link>
+
+Syntax: /listen [+ or -] channel[,channel...]
+         
+Modify the list of channels you are listening to.
+       
+Example:
+       
+      /listen #welcome
+      /listen - #trek
+      /listen + #buffy
+
+To list the channels you are currently listening to, type
+
+      /listen
+

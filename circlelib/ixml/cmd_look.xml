@@ -1,0 +1,6 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_look.xml">look</link>
+
+/look [nick]
+
+See what other people are doing. You can look at a specific person by specifying their nick. If you don't specify a nick, it will print out what everyone in your watch list is doing.
+

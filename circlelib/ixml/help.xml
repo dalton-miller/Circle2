@@ -1,0 +1,12 @@
+Welcome to The Circle!
+
+This window is called the chat window. It allows you to do chat, but also to find people, search for files, listen to music, etc. The chat window uses an interactive command line interface.
+
+The manual contains the following sections:
+ 1. <link path="ixml/chat.xml">How to find other people</link>.
+ 2. <link path="ixml/files.xml">How to search for files</link>.
+ 3. <link path="ixml/list.xml">How to browse other people's files</link>.
+ 4. <link path="ixml/shell.xml">Shell capabilities</link>.
+ 5. <link path="ixml/commands.xml">List of commands</link>
+To view a section, click on the coloured text.
+

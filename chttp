@@ -1,0 +1,11 @@
+#! /usr/bin/env python 
+
+try:
+    import gettext
+    gettext.install('circle')
+except:
+    __builtins__._ = lambda s: s
+
+from circlelib import apt_method
+
+apt_method.run()

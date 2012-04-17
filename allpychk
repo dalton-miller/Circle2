@@ -1,0 +1,526 @@
+
+Warnings...
+
+circlelib/apt_method.py:80: Local variable (i) not used
+circlelib/apt_method.py:133: No global (the_manager) found
+circlelib/apt_method.py:142: No global (the_node) found
+circlelib/apt_method.py:146: Local variable (t1) not used
+circlelib/apt_method.py:147: Local variable (i) not used
+circlelib/apt_method.py:152: Local variable (t2) not used
+circlelib/apt_method.py:241: Catching a non-Exception object (Error)
+circlelib/apt_method.py:249: No global (child_stdout) found
+circlelib/apt_method.py:249: No global (stdin_unbuffered) found
+circlelib/apt_method.py:258: No global (child_stdin) found
+circlelib/apt_method.py:263: Parameter (frame) not used
+circlelib/apt_method.py:263: Parameter (signal) not used
+circlelib/apt_method.py:316: Catching a non-Exception object (Error)
+circlelib/apt_method.py:320: Catching a non-Exception object (Error)
+
+circlelib/cache.py:104: Overridden method (stop) doesn't match signature in class (utility.Task_manager)
+circlelib/cache.py:161: Function returns a value and also implicitly returns None
+circlelib/cache.py:239: Catching a non-Exception object (Error)
+
+circlelib/channels.py:21: Imported module (cStringIO) not used
+circlelib/channels.py:21: Imported module (re) not used
+circlelib/channels.py:47: Overridden method (stop) doesn't match signature in class (utility.Task_manager)
+circlelib/channels.py:84: Catching a non-Exception object (Error)
+circlelib/channels.py:170: Parameter (_b) not used
+circlelib/channels.py:214: Parameter (_b) not used
+circlelib/channels.py:214: Parameter (data) not used
+circlelib/channels.py:268: No global (_) found
+
+circlelib/chat.py:89: Function (chat_tell_task) has too many local variables (43)
+circlelib/chat.py:151: Catching a non-Exception object (Error)
+circlelib/chat.py:171: Catching a non-Exception object (Error)
+circlelib/chat.py:214: Catching a non-Exception object (Error)
+circlelib/chat.py:276: Catching a non-Exception object (Error)
+circlelib/chat.py:306: No global (_) found
+circlelib/chat.py:326: Catching a non-Exception object (Error)
+circlelib/chat.py:369: Local variable (n) not used
+circlelib/chat.py:458: Catching a non-Exception object (Error)
+circlelib/chat.py:458: Local variable (error) not used
+circlelib/chat.py:469: Catching a non-Exception object (Error)
+circlelib/chat.py:524: Parameter (left_action) not used
+circlelib/chat.py:524: Parameter (right_action) not used
+circlelib/chat.py:528: Parameter (color) not used
+circlelib/chat.py:698: Local variable (use_gtk) shadows global defined on line 0 in file <unknown>
+circlelib/chat.py:823: Parameter (event) not used
+circlelib/chat.py:823: Parameter (widget) not used
+circlelib/chat.py:854: Overridden method (stop) doesn't match signature in class (utility.Task_manager)
+circlelib/chat.py:976: No class attribute (text_hide_command_line) found
+circlelib/chat.py:978: No class attribute (text_show_command_line) found
+circlelib/chat.py:1010: No class attribute (shell) found
+circlelib/chat.py:1012: No class attribute (command_text_lines) found
+circlelib/chat.py:1032: Parameter (left_action_dummy) not used
+circlelib/chat.py:1032: Parameter (right_action_dummy) not used
+circlelib/chat.py:1090: Catching a non-Exception object (Error)
+circlelib/chat.py:1094: Catching a non-Exception object (Error)
+circlelib/chat.py:1160: Catching a non-Exception object (Error)
+circlelib/chat.py:1215: Local variable (old_channel) not used
+circlelib/chat.py:1286: No class attribute (run_shell) found
+circlelib/chat.py:1348: Catching a non-Exception object (Error)
+circlelib/chat.py:1357: No class attribute (shell) found
+circlelib/chat.py:1363: No class attribute (shell_master) found
+circlelib/chat.py:1398: Overridden method (stop) doesn't match signature in class (utility.Task_manager)
+circlelib/chat.py:1413: Parameter (left_action) not used
+circlelib/chat.py:1413: Parameter (right_action) not used
+circlelib/chat.py:1633: Local variable (font) not used
+circlelib/chat.py:1693: Redefining attribute (on_event) original line (1639)
+circlelib/chat.py:1721: Parameter (_w) not used
+circlelib/chat.py:1721: Parameter (condition) not used
+circlelib/chat.py:1721: Parameter (end) not used
+circlelib/chat.py:1721: Parameter (source) not used
+circlelib/chat.py:1721: Parameter (widget) not used
+circlelib/chat.py:1789: Statement appears to have no effect
+circlelib/chat.py:1792: TERMIOS module is deprecated, consider using termios
+circlelib/chat.py:1829: Overridden method (stop) doesn't match signature in class (utility.Task_manager)
+circlelib/chat.py:1885: No global (event) found
+circlelib/chat.py:1948: Redefining attribute (on_toggle) original line (1933)
+circlelib/chat.py:2038: Redefining attribute (on_toggle) original line (1933)
+circlelib/chat.py:2058: Redefining attribute (on_click) original line (1974)
+circlelib/chat.py:2066: Redefining attribute (on_press) original line (1976)
+circlelib/chat.py:2111: Parameter (data) not used
+circlelib/chat.py:2117: Parameter (event) not used
+circlelib/chat.py:2117: Parameter (widget) not used
+circlelib/chat.py:2125: Catching a non-Exception object (Error)
+circlelib/chat.py:2145: Parameter (event) not used
+circlelib/chat.py:2145: Parameter (widget) not used
+circlelib/chat.py:2158: Parameter (widget) not used
+circlelib/chat.py:2161: Parameter (event) not used
+circlelib/chat.py:2161: Parameter (widget) not used
+circlelib/chat.py:2168: Catching a non-Exception object (Error)
+circlelib/chat.py:2184: Catching a non-Exception object (Error)
+circlelib/chat.py:2204: Parameter (data) not used
+circlelib/chat.py:2204: Parameter (widget) not used
+circlelib/chat.py:2215: Statement appears to have no effect
+circlelib/chat.py:2215: Using the return value from (menu.append) which is always None
+circlelib/chat.py:2223: Statement appears to have no effect
+circlelib/chat.py:2223: Using the return value from (menu.append) which is always None
+circlelib/chat.py:2230: Statement appears to have no effect
+circlelib/chat.py:2230: Using the return value from (menu.append) which is always None
+
+circlelib/chat_commands.py:27: self is argument in function
+circlelib/chat_commands.py:90: self is argument in function
+circlelib/chat_commands.py:124: self is argument in function
+circlelib/chat_commands.py:161: self is argument in function
+circlelib/chat_commands.py:164: self is argument in function
+circlelib/chat_commands.py:190: Catching a non-Exception object (Error)
+circlelib/chat_commands.py:208: self is argument in function
+circlelib/chat_commands.py:211: self is argument in function
+circlelib/chat_commands.py:214: self is argument in function
+circlelib/chat_commands.py:239: Catching a non-Exception object (Error)
+circlelib/chat_commands.py:244: self is argument in function
+circlelib/chat_commands.py:245: Parameter (param) not used
+circlelib/chat_commands.py:261: Catching a non-Exception object (Error)
+circlelib/chat_commands.py:277: self is argument in function
+circlelib/chat_commands.py:284: self is argument in function
+circlelib/chat_commands.py:293: self is argument in function
+circlelib/chat_commands.py:298: Catching a non-Exception object (Error)
+circlelib/chat_commands.py:306: Local variable (name) not used
+circlelib/chat_commands.py:326: Catching a non-Exception object (Error)
+circlelib/chat_commands.py:341: Parameter (param) not used
+circlelib/chat_commands.py:341: self is argument in function
+circlelib/chat_commands.py:344: self is argument in function
+circlelib/chat_commands.py:359: Catching a non-Exception object (Error)
+circlelib/chat_commands.py:365: Catching a non-Exception object (Error)
+circlelib/chat_commands.py:369: Parameter (param) not used
+circlelib/chat_commands.py:369: self is argument in function
+circlelib/chat_commands.py:376: Parameter (param) not used
+circlelib/chat_commands.py:376: self is argument in function
+circlelib/chat_commands.py:383: self is argument in function
+circlelib/chat_commands.py:404: self is argument in function
+circlelib/chat_commands.py:421: self is argument in function
+circlelib/chat_commands.py:449: Catching a non-Exception object (Error)
+circlelib/chat_commands.py:453: self is argument in function
+circlelib/chat_commands.py:469: No global (_) found
+circlelib/chat_commands.py:497: self is argument in function
+circlelib/chat_commands.py:501: Parameter (param) not used
+circlelib/chat_commands.py:538: self is argument in function
+circlelib/chat_commands.py:558: self is argument in function
+circlelib/chat_commands.py:564: self is argument in function
+circlelib/chat_commands.py:573: self is argument in function
+circlelib/chat_commands.py:582: Parameter (ignored__param) not used
+circlelib/chat_commands.py:586: self is argument in function
+
+circlelib/check.py:258: Function (matches) has too many returns (13)
+
+circlelib/circle.py:153: Imported module (imp) not used
+circlelib/circle.py:153: Imported module (whrandom) not used
+circlelib/circle.py:153: whrandom module is deprecated, consider using random
+circlelib/circle.py:157: Module member (utility) re-imported with *
+circlelib/circle.py:203: string.atoi is deprecated
+circlelib/circle.py:208: string.atoi is deprecated
+circlelib/circle.py:223: No global (_) found
+circlelib/circle.py:311: Parameter (frame) not used
+circlelib/circle.py:311: Parameter (signal) not used
+circlelib/circle.py:371: Catching a non-Exception object (Error)
+circlelib/circle.py:468: Catching a non-Exception object (Error)
+circlelib/circle.py:478: Parameter (frame) not used
+circlelib/circle.py:490: Catching a non-Exception object (Error)
+circlelib/circle.py:593: No class attribute (donkey) found
+circlelib/circle.py:595: No class attribute (overnet) found
+circlelib/circle.py:701: Parameter (button) not used
+circlelib/circle.py:732: Redefining attribute (on_clicked) original line (719)
+circlelib/circle.py:789: Catching a non-Exception object (Error)
+circlelib/circle.py:820: Parameter (frame) not used
+circlelib/circle.py:834: Catching a non-Exception object (Error)
+circlelib/circle.py:950: Methods (__getattr__) in Signature_widget need to be overridden in a subclass
+circlelib/circle.py:1029: Parameter (_b) not used
+circlelib/circle.py:1148: Parameter (event) not used
+circlelib/circle.py:1159: No module attribute (__version__) found
+circlelib/circle.py:1189: Catching a non-Exception object (Error)
+circlelib/circle.py:1313: Local variable (whiteboard) not used
+circlelib/circle.py:1425: Local variable (i) not used
+circlelib/circle.py:1482: Parameter (_w) not used
+circlelib/circle.py:1482: Parameter (button) not used
+circlelib/circle.py:1482: Parameter (m) not used
+circlelib/circle.py:1601: Parameter (_b) not used
+circlelib/circle.py:1616: Catching a non-Exception object (Error)
+circlelib/circle.py:1628: Parameter (_b) not used
+circlelib/circle.py:1636: Parameter (_b) not used
+circlelib/circle.py:1639: Catching a non-Exception object (Error)
+circlelib/circle.py:1667: Parameter (_b) not used
+circlelib/circle.py:1680: Catching a non-Exception object (Error)
+circlelib/circle.py:1692: Parameter (_b) not used
+circlelib/circle.py:1695: Catching a non-Exception object (Error)
+circlelib/circle.py:1698: Parameter (_b) not used
+circlelib/circle.py:1701: Parameter (_b) not used
+circlelib/circle.py:1705: Parameter (_b) not used
+circlelib/circle.py:1708: Parameter (_b) not used
+circlelib/circle.py:1711: Catching a non-Exception object (Error)
+circlelib/circle.py:1714: Parameter (_b) not used
+circlelib/circle.py:1717: Catching a non-Exception object (Error)
+circlelib/circle.py:1720: Parameter (_b) not used
+circlelib/circle.py:1723: Catching a non-Exception object (Error)
+circlelib/circle.py:1726: Parameter (_b) not used
+circlelib/circle.py:1729: Catching a non-Exception object (Error)
+circlelib/circle.py:1732: Parameter (_b) not used
+circlelib/circle.py:1735: Catching a non-Exception object (Error)
+circlelib/circle.py:1738: Parameter (_b) not used
+circlelib/circle.py:1741: Catching a non-Exception object (Error)
+circlelib/circle.py:1744: Parameter (_b) not used
+circlelib/circle.py:1747: Catching a non-Exception object (Error)
+circlelib/circle.py:1750: Parameter (_b) not used
+circlelib/circle.py:1762: Catching a non-Exception object (Error)
+circlelib/circle.py:1772: Catching a non-Exception object (Error)
+circlelib/circle.py:1859: Parameter (_b) not used
+circlelib/circle.py:1874: Catching a non-Exception object (Error)
+
+circlelib/classify.py:71: Raising string exceptions are deprecated (An error)
+circlelib/classify.py:76: Raising string exceptions are deprecated (An error)
+
+circlelib/crypto/RSA.py:68: Object (obj) has no attribute (p)
+circlelib/crypto/RSA.py:68: Object (obj) has no attribute (q)
+circlelib/crypto/RSA.py:73: Object (obj) has no attribute (e)
+circlelib/crypto/RSA.py:73: Object (obj) has no attribute (p)
+circlelib/crypto/RSA.py:73: Object (obj) has no attribute (q)
+circlelib/crypto/RSA.py:80: Raising string exceptions are deprecated (error)
+circlelib/crypto/RSA.py:99: Parameter (K) not used
+circlelib/crypto/RSA.py:100: No class attribute (n) found
+circlelib/crypto/RSA.py:101: Raising string exceptions are deprecated (error)
+circlelib/crypto/RSA.py:102: No class attribute (e) found
+circlelib/crypto/RSA.py:102: No class attribute (n) found
+circlelib/crypto/RSA.py:106: Raising string exceptions are deprecated (error)
+circlelib/crypto/RSA.py:107: No class attribute (n) found
+circlelib/crypto/RSA.py:108: Raising string exceptions are deprecated (error)
+circlelib/crypto/RSA.py:109: No class attribute (d) found
+circlelib/crypto/RSA.py:109: No class attribute (n) found
+circlelib/crypto/RSA.py:111: Parameter (K) not used
+circlelib/crypto/RSA.py:121: No class attribute (n) found
+circlelib/crypto/RSA.py:132: No class attribute (e) found
+circlelib/crypto/RSA.py:132: No class attribute (n) found
+
+circlelib/crypto/number.py:64: Using integer division (u3 / v3) may return integer or float
+
+circlelib/crypto/pubkey.py:26: No class attribute (keydata) found
+circlelib/crypto/pubkey.py:34: No class attribute (keydata) found
+circlelib/crypto/pubkey.py:47: No class attribute (_encrypt) found
+circlelib/crypto/pubkey.py:58: No class attribute (_decrypt) found
+circlelib/crypto/pubkey.py:66: No global (error) found
+circlelib/crypto/pubkey.py:69: No class attribute (_sign) found
+circlelib/crypto/pubkey.py:75: No class attribute (_verify) found
+
+circlelib/crypto/rijndael.py:283: Using integer division (KC / 2) may return integer or float
+circlelib/crypto/rijndael.py:285: Using integer division (KC / 2) may return integer or float
+circlelib/crypto/rijndael.py:286: Using integer division (KC / 2) may return integer or float
+circlelib/crypto/rijndael.py:291: Using integer division (KC / 2) may return integer or float
+circlelib/crypto/rijndael.py:356: No global (plaintext) found
+
+circlelib/donkey.py:32: Imported module (traceback) not used
+circlelib/donkey.py:37: Using import and from ... import for (utility)
+circlelib/donkey.py:156: Local variable (buffer) not used
+circlelib/donkey.py:178: No class attribute (status) found
+circlelib/donkey.py:284: Statement appears to have no effect
+circlelib/donkey.py:287: TERMIOS module is deprecated, consider using termios
+circlelib/donkey.py:322: Overridden method (stop) doesn't match signature in class (utility.Task_manager)
+circlelib/donkey.py:431: Parameter (app) not used
+circlelib/donkey.py:431: Parameter (data) not used
+circlelib/donkey.py:431: Parameter (field) not used
+circlelib/donkey.py:431: Parameter (widget) not used
+circlelib/donkey.py:459: No class attribute (status) found
+circlelib/donkey.py:462: Parameter (app) not used
+circlelib/donkey.py:462: Parameter (data) not used
+circlelib/donkey.py:462: Parameter (field) not used
+circlelib/donkey.py:462: Parameter (widget) not used
+circlelib/donkey.py:468: No global (_) found
+
+circlelib/error.py:39: Module (utility) imports itself
+circlelib/error.py:59: Parameter (_b) not used
+
+circlelib/file_server.py:74: Catching a non-Exception object (Error)
+circlelib/file_server.py:83: Catching a non-Exception object (Error)
+circlelib/file_server.py:99: Catching a non-Exception object (Error)
+circlelib/file_server.py:102: self is argument in function
+circlelib/file_server.py:128: Local variable (i) not used
+circlelib/file_server.py:162: Overridden method (stop) doesn't match signature in class (utility.Task_manager)
+circlelib/file_server.py:182: No global (_) found
+circlelib/file_server.py:246: Local variable (i) not used
+circlelib/file_server.py:302: Overridden method (stop) doesn't match signature in class (utility.Task_manager)
+circlelib/file_server.py:396: No class attribute (number) found
+circlelib/file_server.py:465: Parameter (button) not used
+circlelib/file_server.py:465: Parameter (column) not used
+circlelib/file_server.py:465: Parameter (event) not used
+circlelib/file_server.py:465: Parameter (index) not used
+circlelib/file_server.py:465: Parameter (list) not used
+circlelib/file_server.py:465: Parameter (window) not used
+circlelib/file_server.py:470: No class attribute (selected_row) found
+circlelib/file_server.py:473: No class attribute (selected_row) found
+circlelib/file_server.py:611: Object (file) has no attribute (length)
+circlelib/file_server.py:618: Object (file) has no attribute (hash)
+circlelib/file_server.py:618: Object (file) has no attribute (length)
+circlelib/file_server.py:622: Object (file) has no attribute (hash)
+circlelib/file_server.py:622: Object (file) has no attribute (length)
+circlelib/file_server.py:637: Iterating over a string (-_.,?!)
+circlelib/file_server.py:655: Object (file) has no attribute (info)
+circlelib/file_server.py:656: Object (file) has no attribute (info)
+circlelib/file_server.py:657: Object (file) has no attribute (info)
+circlelib/file_server.py:658: Object (file) has no attribute (info)
+circlelib/file_server.py:659: Object (file) has no attribute (info)
+circlelib/file_server.py:660: Object (file) has no attribute (info)
+circlelib/file_server.py:667: Object (file) has no attribute (hash)
+circlelib/file_server.py:667: Object (file) has no attribute (names)
+circlelib/file_server.py:669: Object (file) has no attribute (info)
+circlelib/file_server.py:676: Object (file) has no attribute (info)
+circlelib/file_server.py:677: Object (file) has no attribute (names)
+circlelib/file_server.py:679: Object (file) has no attribute (info)
+circlelib/file_server.py:680: Object (file) has no attribute (names)
+circlelib/file_server.py:683: Object (file) has no attribute (info)
+circlelib/file_server.py:684: Object (file) has no attribute (info)
+circlelib/file_server.py:685: Object (file) has no attribute (names)
+circlelib/file_server.py:697: Parameter (flags) not used
+circlelib/file_server.py:713: Object (dir) has no attribute (files)
+circlelib/file_server.py:798: Catching a non-Exception object (Error)
+circlelib/file_server.py:798: Local variable (error) not used
+circlelib/file_server.py:869: Overridden method (stop) doesn't match signature in class (utility.Task_manager)
+circlelib/file_server.py:959: Parameter (call_id) not used
+circlelib/file_server.py:978: Function return types are inconsistent
+circlelib/file_server.py:1009: Function returns a value and also implicitly returns None
+
+circlelib/gossip.py:27: Using import and from ... import for (utility)
+circlelib/gossip.py:163: Parameter (button) not used
+circlelib/gossip.py:300: Overridden method (stop) doesn't match signature in class (utility.Task_manager)
+circlelib/gossip.py:395: Catching a non-Exception object (Error)
+circlelib/gossip.py:420: Catching a non-Exception object (Error)
+circlelib/gossip.py:420: Local variable (error) not used
+circlelib/gossip.py:445: Parameter (call_id) not used
+circlelib/gossip.py:652: Catching a non-Exception object (Error)
+circlelib/gossip.py:662: Parameter (_b) not used
+circlelib/gossip.py:662: Parameter (button) not used
+circlelib/gossip.py:667: Parameter (topic) not used
+circlelib/gossip.py:692: No global (_) found
+circlelib/gossip.py:707: Parameter (_b) not used
+circlelib/gossip.py:707: Parameter (b) not used
+
+circlelib/gtkpildisplay.py:52: Parameter (event) not used
+circlelib/gtkpildisplay.py:52: Parameter (widget) not used
+circlelib/gtkpildisplay.py:68: Methods (__getattr__) in GtkPILDisplay need to be overridden in a subclass
+
+circlelib/hash.py:108: Catching a non-Exception object (Error)
+circlelib/hash.py:131: Local variable (i) not used
+
+circlelib/imageviewer.py:4: Imported module (GtkExtra) not used
+circlelib/imageviewer.py:5: Imported module (random) not used
+circlelib/imageviewer.py:6: Imported module (math) not used
+circlelib/imageviewer.py:9: Imported module (pil2drawable) not used
+circlelib/imageviewer.py:12: Imported module (string) not used
+circlelib/imageviewer.py:15: Imported module (dircache) not used
+circlelib/imageviewer.py:15: Imported module (time) not used
+circlelib/imageviewer.py:15: Module (os) re-imported
+circlelib/imageviewer.py:40: Parameter (event) not used
+circlelib/imageviewer.py:45: Parameter (widget) not used
+circlelib/imageviewer.py:68: Methods (__getattr__) in gtkpildisplay.GtkPILDisplay need to be overridden in a subclass
+circlelib/imageviewer.py:89: Base class (gtk.GtkVBox) __init__() not called
+circlelib/imageviewer.py:103: Methods (__getattr__) in Viewer need to be overridden in a subclass
+
+circlelib/magic.py:103: Local variable (NOT_DONE_YET) not used
+circlelib/magic.py:376: Function (classify) has too many branches (57)
+circlelib/magic.py:376: Function (classify) has too many lines (251)
+circlelib/magic.py:383: Local variable (results) not used
+
+circlelib/mp3.py:51: Parameter (e) not used
+circlelib/mp3.py:59: Parameter (e) not used
+circlelib/mp3.py:70: Parameter (e) not used
+circlelib/mp3.py:179: Parameter (event) not used
+circlelib/mp3.py:180: Module (os) re-imported
+
+circlelib/name_server.py:73: Parameter (ignored__transient_for) not used
+circlelib/name_server.py:173: Parameter (event) not used
+circlelib/name_server.py:173: Parameter (widget) not used
+circlelib/name_server.py:210: Parameter (ignore) not used
+circlelib/name_server.py:276: No global (_) found
+circlelib/name_server.py:308: Catching a non-Exception object (Error)
+circlelib/name_server.py:578: Using integer division (up_minutes / 60) may return integer or float
+circlelib/name_server.py:580: Module (search) imports itself
+circlelib/name_server.py:599: Methods (__getattr__) in Signature_widget need to be overridden in a subclass
+circlelib/name_server.py:662: Redefining attribute (action) original line (579)
+circlelib/name_server.py:693: Catching a non-Exception object (Error)
+circlelib/name_server.py:722: Parameter (_b) not used
+circlelib/name_server.py:722: Parameter (_w) not used
+circlelib/name_server.py:722: Parameter (button) not used
+circlelib/name_server.py:722: Parameter (ignore) not used
+circlelib/name_server.py:751: Catching a non-Exception object (Error)
+circlelib/name_server.py:754: self is argument in function
+circlelib/name_server.py:779: self is argument in function
+circlelib/name_server.py:806: Catching a non-Exception object (Error)
+circlelib/name_server.py:907: Catching a non-Exception object (Error)
+circlelib/name_server.py:964: Overridden method (start) doesn't match signature in class (utility.Task_manager)
+circlelib/name_server.py:1026: Catching a non-Exception object (Error)
+circlelib/name_server.py:1060: Catching a non-Exception object (Error)
+circlelib/name_server.py:1137: Function (handle) has too many returns (12)
+circlelib/name_server.py:1158: Parameter (call_id) not used
+circlelib/name_server.py:1161: Catching a non-Exception object (Error)
+circlelib/name_server.py:1191: Catching a non-Exception object (Error)
+circlelib/name_server.py:1234: Function returns a value and also implicitly returns None
+circlelib/name_server.py:1288: Catching a non-Exception object (Error)
+
+circlelib/node.py:259: No global (_) found
+circlelib/node.py:286: Local variable (i) not used
+circlelib/node.py:370: Parameter (low_priority) not used
+circlelib/node.py:383: Local variable (i) not used
+circlelib/node.py:486: Catching a non-Exception object (Error)
+circlelib/node.py:507: Catching a non-Exception object (Error)
+circlelib/node.py:509: Catching a non-Exception object (Error)
+circlelib/node.py:533: Catching a non-Exception object (Error)
+circlelib/node.py:668: Catching a non-Exception object (Error)
+circlelib/node.py:668: Local variable (error) not used
+circlelib/node.py:716: Catching a non-Exception object (Error)
+circlelib/node.py:754: Catching a non-Exception object (Error)
+circlelib/node.py:770: Catching a non-Exception object (Error)
+circlelib/node.py:798: Function (perform_standard_request) has too many returns (23)
+circlelib/node.py:823: Function return types are inconsistent
+circlelib/node.py:828: Function return types are inconsistent
+circlelib/node.py:830: Function return types are inconsistent
+circlelib/node.py:892: Function return types are inconsistent
+circlelib/node.py:950: Function return types are inconsistent
+circlelib/node.py:961: Function return types are inconsistent
+circlelib/node.py:1044: Function returns a value and also implicitly returns None
+circlelib/node.py:1055: Raising string exceptions are deprecated (blarg)
+circlelib/node.py:1216: Catching a non-Exception object (Error)
+circlelib/node.py:1256: Local variable (i) not used
+circlelib/node.py:1261: Catching a non-Exception object (Error)
+circlelib/node.py:1282: Catching a non-Exception object (Error)
+circlelib/node.py:1310: Catching a non-Exception object (Error)
+circlelib/node.py:1339: Catching a non-Exception object (Error)
+circlelib/node.py:1529: Overridden method (start) doesn't match signature in class (utility.Task_manager)
+circlelib/node.py:1618: Overridden method (stop) doesn't match signature in class (utility.Task_manager)
+circlelib/node.py:2039: Catching a non-Exception object (Error)
+circlelib/node.py:2103: Catching a non-Exception object (Error)
+circlelib/node.py:2152: Catching a non-Exception object (Error)
+circlelib/node.py:2152: Local variable (error) not used
+circlelib/node.py:2158: Catching a non-Exception object (Error)
+circlelib/node.py:2166: Local variable (i) not used
+circlelib/node.py:2242: Local variable (i) not used
+circlelib/node.py:2250: Local variable (error) not used
+circlelib/node.py:2273: Local variable (error) not used
+circlelib/node.py:2374: Catching a non-Exception object (Error)
+circlelib/node.py:2378: Local variable (j) not used
+circlelib/node.py:2469: Catching a non-Exception object (Error)
+circlelib/node.py:2490: Catching a non-Exception object (Error)
+circlelib/node.py:2518: Catching a non-Exception object (Error)
+
+circlelib/node_monitor.py:28: Using import and from ... import for (utility)
+circlelib/node_monitor.py:54: Catching a non-Exception object (Error)
+circlelib/node_monitor.py:91: Parameter (adjustment) not used
+circlelib/node_monitor.py:91: Parameter (button) not used
+circlelib/node_monitor.py:91: Parameter (event) not used
+circlelib/node_monitor.py:137: Local variable (pos) not used
+
+circlelib/proxy.py:249: string.atoi is deprecated
+
+circlelib/safe_pickle.py:111: Function (load) has too many returns (11)
+circlelib/safe_pickle.py:149: Local variable (i) not used
+
+circlelib/search.py:47: Catching a non-Exception object (Error)
+circlelib/search.py:72: Catching a non-Exception object (Error)
+circlelib/search.py:168: No global (_) found
+circlelib/search.py:205: Catching a non-Exception object (Error)
+circlelib/search.py:205: Local variable (error) not used
+circlelib/search.py:261: Parameter (app) not used
+circlelib/search.py:268: No class attribute (text) found
+circlelib/search.py:359: Catching a non-Exception object (Error)
+circlelib/search.py:379: No class attribute (_setup) found
+circlelib/search.py:382: No class attribute (title) found
+circlelib/search.py:385: No class attribute (title) found
+circlelib/search.py:388: No class attribute (description) found
+circlelib/search.py:393: Parameter (item) not used
+circlelib/search.py:421: Methods (__getattr__) in Signature_widget need to be overridden in a subclass
+circlelib/search.py:467: Parameter (_b) not used
+circlelib/search.py:471: Parameter (address) not used
+circlelib/search.py:485: Parameter (_b) not used
+circlelib/search.py:510: Parameter (_b) not used
+circlelib/search.py:519: Parameter (address) not used
+circlelib/search.py:583: Parameter (_b) not used
+circlelib/search.py:583: Parameter (b) not used
+circlelib/search.py:588: Parameter (address) not used
+circlelib/search.py:596: Catching a non-Exception object (Error)
+circlelib/search.py:608: Catching a non-Exception object (Error)
+circlelib/search.py:617: Parameter (window) not used
+circlelib/search.py:622: Catching a non-Exception object (Error)
+circlelib/search.py:641: Catching a non-Exception object (Error)
+circlelib/search.py:693: Parameter (_b) not used
+
+circlelib/textviewer.py:4: Imported module (GtkExtra) not used
+circlelib/textviewer.py:5: Imported module (random) not used
+circlelib/textviewer.py:6: Imported module (math) not used
+circlelib/textviewer.py:9: Imported module (re) not used
+circlelib/textviewer.py:9: Imported module (string) not used
+circlelib/textviewer.py:9: Module (sys) re-imported
+circlelib/textviewer.py:10: Imported module (dircache) not used
+circlelib/textviewer.py:10: Imported module (time) not used
+circlelib/textviewer.py:10: Module (os) re-imported
+circlelib/textviewer.py:37: Parameter (event) not used
+
+circlelib/utility.py:168: Parameter (args) not used
+circlelib/utility.py:189: Global variable (threadnice_mainloop_running) not defined in module scope
+circlelib/utility.py:339: Parameter (window) not used
+circlelib/utility.py:634: Overridden method (start) doesn't match signature in class (threading.Thread)
+circlelib/utility.py:694: self is not first method argument
+circlelib/utility.py:802: Overridden method (start) doesn't match signature in class (utility.Task_manager)
+circlelib/utility.py:941: Local variable (i) not used
+circlelib/utility.py:976: Statement appears to have no effect
+circlelib/utility.py:979: TERMIOS module is deprecated, consider using termios
+
+circlelib/whiteboard.py:152: Parameter (event) not used
+circlelib/whiteboard.py:155: Parameter (win) not used
+circlelib/whiteboard.py:224: Parameter (d) not used
+circlelib/whiteboard.py:248: Local variable (dest_bad_names) not used
+circlelib/whiteboard.py:273: Local variable (my_details) not used
+circlelib/whiteboard.py:291: Catching a non-Exception object (Error)
+
+circlelib/widgets.py:175: Catching a non-Exception object (Error)
+circlelib/widgets.py:182: Redefining attribute (action) original line (172)
+circlelib/widgets.py:196: Parameter (event) not used
+circlelib/widgets.py:236: Local variable (i) not used
+circlelib/widgets.py:308: Parameter (event) not used
+circlelib/widgets.py:315: Local variable (step) not used
+circlelib/widgets.py:317: os.tmpnam() is a security problem
+circlelib/widgets.py:348: Parameter (widget) not used
+circlelib/widgets.py:409: Parameter (button) not used
+circlelib/widgets.py:455: Parameter (column) not used
+circlelib/widgets.py:455: Parameter (event) not used
+circlelib/widgets.py:455: Parameter (list) not used
+circlelib/widgets.py:613: Parameter (b) not used
+circlelib/widgets.py:645: Parameter (b) not used
+circlelib/widgets.py:685: Parameter (event) not used
+circlelib/widgets.py:712: Parameter (event) not used
+circlelib/widgets.py:712: Parameter (width) not used

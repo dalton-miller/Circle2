@@ -1,0 +1,16 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_join.xml">join</link>
+
+Syntax: /join [+ or -] nick/channel[,nick/channel...]
+       
+Modify the list of people or channels you are talking to.
+  
+If a + or - is put in front of the list, respectively add or subtract
+the people or channels to the list.
+       
+Example:
+
+   /join bob,tony,#buffy      
+   /join - tony
+   /join + sam,tracy
+          
+Keyboard shortcut: Ctrl-J

@@ -1,0 +1,7 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_get.xml">get</link>
+
+Syntax: /get filename 
+
+The /get command downloads files found with /search or with /ls.
+You may use tab-completions to type in the filename
+

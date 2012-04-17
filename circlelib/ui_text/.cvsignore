@@ -1,0 +1,4 @@
+*.pyc
+*~
+*[$]py.class
+magic.circle.cache magic.linux.cache

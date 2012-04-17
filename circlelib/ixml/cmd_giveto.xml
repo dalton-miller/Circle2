@@ -1,0 +1,6 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_giveto.xml">giveto</link>
+
+/giveto nick[,nick...] file [message]
+/giveto nick[,nick...] !python_expression [message]
+
+Like "/give", but to a person or people other than those you have "/join"ed.

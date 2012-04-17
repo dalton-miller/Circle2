@@ -1,0 +1,10 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/chat.xml">Finding people</link>
+
+You may send messages to a channel, or to a person. Messages sent to a channel are public. Messages sent to a person are encrypted.
+
+To find out who is listening on a channel, use the /who command. For example, if you want to find out who is listening on channel #welcome, type <command>/who #welcome</command> and press enter. A list of people will be displayed.
+
+You may use auto-completions to type faster. If you just type <command>/who </command> and press the tabulation, a list of possible completions shows up. Press 'w' and the tabulation once again, and it should complete to '#welcome'. Type enter to validate. Note that /who is aliased to Ctrl-W, so you may learn to type 'Ctrl-w TAB w TAB' very fast.
+
+[<link path="ixml/chat2.xml">next</link>]
+

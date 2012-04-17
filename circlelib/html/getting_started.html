@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>The Circle: Getting Started</title>
+    
+</head>
+  <body>
+                
+<h1>Getting Started</h1>
+       <big><br>
+       <a href="#Preliminaries">1. Preliminaries (getting Circle to work)</a><br>
+       <a href="#Configuration">2. Configuration</a><br>
+       <a href="#people">3. Finding people  </a><br>
+       <a href="#files">4. Finding and downloading files  </a><br>
+       <a href="#messages">5. Sending messages to people  </a><br>
+       <a href="#gossip">6. Reading gossip</a><br>
+       <a href="#textmode">7. Text mode (<tt>circle -t</tt>)</a>  <br>
+       <a href="#goofey">8. Running goofey in the chat window</a><br>
+       <a href="#apt-method">9. Using the apt methods</a></big>   <br>
+       <a href="#plug-ins"><big>10. Using plug-ins</big></a>
+      
+<p><br>
+       </p>
+             
+<h2><a name="Preliminaries">1. Preliminaries</a></h2>
+                
+<h3>RedHat 9.0 users:</h3>
+       Redhat 9.0 is shipped with a buggy version of glibc, that prevents 
+Circle    from behaving properly.<br>
+       In order to get around this, it is possible to use the RawHide RPMs: 
+ <a
+ href="ftp://rpmfind.net/linux/rawhide/1.0/i386/RedHat/RPMS/glibc-2.3.2-37.i386.rpm">glibc-2.3.2-37.i386.rpm</a> 
+   or <a
+ href="ftp://rpmfind.net/linux/rawhide/1.0/i386/RedHat/RPMS/glibc-2.3.2-37.i686.rpm">glibc-2.3.2-37.i686.rpm.</a><br>
+       <br>
+
+<h3>Gentoo GNU/Linux users:</h3>
+The version of pygtk required to run Circle is currently masked as an unstable/testing package. There are two major methods that can be used to emerge the pygtk version that one needs:
+<ul>
+   <li>There is a variable known as ACCEPT_KEYWORDS which controls whether one gets stable or unstable ebuilds when emerging. In order to get unstable packages, one would use ACCEPT_KEYWORDS="~arch". So, for the x86 architecture, the following command could be used to emerge the correct version of pygtk:<br>
+   #ACCEPT_KEYWORDS="~x86" emerge '&gt;=emerge dev-python/pygtk-1.99.16'<br>
+   The ACCEPT_KEYWORDS variable can also been set to unstable in make.conf, but this is very dangerous as all of the packages emerged will be unstable!
+   <li>One can also edit the file $PORTDIR/dev-python/pygtk/pygtk-1.99.16.ebuild and remove the tilde (~) from one's architecture in the declaration of the KEYWORD variable.
+</ul>
+<br>
+ 
+            
+<h3>Windows XP users:</h3>
+      To make circle (version 0.34) work on XP,  you may have to delete the 
+ EMM32.dll  file to get putty working.  <br>
+      To make circle (version 0.35) work on XP, you may have to add the directory 
+  C:\Program Files\GTK\2.0\lib to your Path environment variable  <br>
+       <br>
+            
+<h3>Circle and NAT:</h3>
+                 
+<p>If you have a direct connection to the internet, and you don't use BSD,
+    you can skip ahead to the <a href="#Configuration">next</a>  section.
+ Otherwise, welcome to the wonderful world of slightly broken internet protocols...<br>
+        <br>
+       A computer behind a NAT (aka masquerading) network is something of 
+a  second   class citizen. It can connect to other machines, but other machines 
+ can't   connect to it. Circle needs other computers to be able to contact 
+ your computer,   so we need to use a little trickery to get things working. 
+  </p>
+             
+<p> You have two options:  </p>
+             
+<ol>
+        <li> run a proxy on a remote server (usually your firewall) </li>
+         <li> configure your firewall to port forward UDP traffic for Circle
+    </li>
+             
+</ol>
+                
+<p> Circle can usually detect when you are using NAT, and will offer to run 
+   the proxy if there is NAT. You can also specify the exact options you want
+   on the command line (run <tt>circle -h</tt> for a list of options).  </p>
+             
+<h4>The proxy</h4>
+                
+<p> Running a proxy sounds like a lot of stuffing about and bother, right?
+     </p>
+             
+<p> Wrong (hopefully...)  </p>
+             
+<p> You'll need to have installed an SSH server and Python on the machine
+    you want to run the proxy on, Circle can do the rest. When you run Circle, 
+   it will ask you for the machine you want to use as the proxy. It will then
+   connect to it using SSH and send the proxy  (which is a short Python program)
+   over the network.     </p>
+         
+<h4>Configuring your firewall to pass Circle packets</h4>
+                
+<p> Ok, the previous section was the easy way. This is the hard way.  </p>
+             
+<p> If you can configure your firewall to forward all connection on the 
+UDP port to your computer, circle should work. If more than one person is
+ running circle within the internal network, each computer will have to 
+be associated to a dedicated port in the 29610+ range.  </p>
+             
+<p> You will then have to use circle with the -d option. Windows users, create 
+   a shortcut of the program, edit it with properties and add the -d to the 
+  command line  </p>
+             
+<p> <b> If your computer or firewall does some kind of packet filtering, please
+make  sure it doesn't reject UDP packets for ports in the range 29610 to
+29619. </b>  </p>
+             
+<p> Linux firewall IP table rule could look like (this is not for copy and 
+   paste) </p>
+             
+<pre>	iptables -A GROUP -p udp -m udp --dport 29610 -j UDPACCEPT<br>	iptables -A GROUP -p udp -m udp --dport 29611 -j UDPACCEPT<br>	...<br>	iptables -A PREROUTING -i eth0 -p udp -m udp --dport 29610 -j DNAT --to-destination 10.0.0.10:29610<br>	iptables -A POSTROUTING -s 10.0.0.0/255.255.255.0 -o eth0 -j MASQUERADE<br></pre>
+                
+<p> <i>disclaimer:</i><br>
+        Paul said that masquerading can cause problems, however I (Thomas 
+Mangin)    haven't noticed any problems using it.  </p>
+             
+<p> <i>disclaimer to the disclaimer:</i><br>
+        Paul stands by his opinion. Masquerading will do weird ass stuff. 
+You'll    disappear and reappear in the network randomly.  </p>
+             
+<h3>BSD users</h3>
+               
+<p> BSD users should make sure their packet filter allows the UDP  packets 
+   sent by Circle through (Circle uses UDP ports 29610 to 29620). To do this 
+   you'll need to modify your packet filter's setup. Replace the following 
+ line  in your /etc/pf.conf  </p>
+             
+<pre>	block in quick on $ExtIF from any to any<br>with<br>	block in quick on $ExtIF from any to any<br>	pass in quick on $ExtIF inet proto udp from any to any port 29609 &gt;&lt; 29621<br><br><br><br></pre>
+                
+<p> <i>Ok, thats the nasty network stuff done with, on to the fun part.</i>
+     </p>
+             
+<h2><a name="Configuration">2. Configuration</a></h2>
+                
+<p>Once you have Circle up and running, you'll need to enter some information 
+   about yourself so that other people can find you. You may also elect to 
+ make  some files on your hard disk available to other people on the network, 
+ and  specify a directory in which to place files you download.  </p>
+             
+<p>To do this, choose the "Configure" option in the "Network" menu.<br>
+     </p>
+         
+<h2><a name="people"></a>3. Finding people</h2>
+                
+<p>To find a person, enter their name or username in the search box, and 
+click "Find person". This will bring up a list of people matching your search. 
+     </p>
+             
+<p>Select the person you are looking for and click "Add to acquaintances". 
+    This will add their username to your list of contacts on the right hand
+   side of the main window. It will also let you specify some options, such
+  as whether you want to be told  when they arrive and leave    </p>
+                
+<p>Circle users are referred to by a nickname. This is usually the username
+   they specified, but if two people have the same name, one of them will
+have   a number stuck on the end to distinguish them. You may also change
+the nickname   to a word of your choosing.  </p>
+         
+<p>A person will be assigned a nickname if: </p>
+         
+<ul>
+       <li>You search for them, then click the "Add to acquaintances" button; 
+  or </li>
+       <li>They send you a message. </li>
+         
+</ul>
+            
+<p><br>
+     </p>
+             
+<h2><a name="files"></a>4. Finding and downloading files</h2>
+                
+<p>To search for a file, enter some keywords or the full file name in the
+    search box, then press the "Find file" button (just like an internet
+search    engine). The Circle will then display a list of matching files
+and you can   choose which ones you wish to download.   </p>
+             
+<h2><a name="messages"></a>5. Sending messages&nbsp;</h2>
+                
+<p>A list of people you can send messages to is displayed in the right hand
+    column of the main window. Click on the "&gt;" arrow next to the person
+  you want to talk to, then type in your message in the main area of the
+window    and press enter.  </p>
+             
+<p>As well as talking to people, you can talk on channels, rather like IRC.
+    You will have been automatically subscribed to the "#welcome" channel.
+ You  can send a message to everyone on "#welcome" by clicking on the "&gt;"
+ arrow  next to #welcome and typing your message as before.  </p>
+             
+<p>You can do a number of other funky things related to messaging. For more 
+   information, see the <a href="chat_commands.html">chat commands</a> page.
+      </p>
+             
+<h2><a name="gossip"></a>6. Reading gossip</h2>
+                
+<p>The Circle has a system for gathering items of news posted by other Circle
+    users, called gossip. It uses a trust network, rather like <a
+ href="http://www.advogato.org">Advogato</a> except that rather than raph 
+   et al being the root of the network, <em>you</em> are. What this means 
+is   you can individually tailor the news items you receive by specifying 
+people   you trust.  </p>
+             
+<p>To specify that you trust someone, bring up their details window by clicking
+    on their name or searching for them. Then tick the "Trust this person"
+ checkbox   and move the slider to specify the degree to which you trust
+them.   </p>
+             
+<p>Once you have specified some people you trust you can view current news 
+   items using the "Show hot gossip" option in the "Gossip" menu. You can 
+also   post your own gossip using the "Post gossip" option, and other people 
+will   be able to read it.   </p>
+             
+<h2><a name="textmode"></a>7. Text mode (<tt>circle -t</tt>)</h2>
+                   
+<p>Circle has a text mode for people who are too manly to use graphical interfaces. 
+  <br>
+     The text only interface can be started by running :  </p>
+              
+<pre>      circle -t</pre>
+           
+<p>In text mode, you will need to use the weird commands described on the 
+<a href="chat_commands.html">Circle commands</a> page.    </p>
+              
+<p>However, text mode isn't as capable as graphical mode (you cannot use Gossip
+in text mode).<br>
+     </p>
+         
+<p>All the Circle commands that exist in text mode can also be used in the 
+  chat window of the graphical interface. <br>
+     In this window, it is also possible to click with your mouse pointer 
+on  the results returned by most Circle commands.<br>
+     <br>
+     </p>
+         
+<h2><a name="goofey"></a>8. Running goofey in the chat window</h2>
+                
+<p>If you don't know what goofey is, you don't need to read this section.
+     </p>
+             
+<p>The Circle can run arbitrary shell commands in the main area of the window.
+    Simply prefix the command with a double slash ("//"). So, for example,
+ you  can run goofey by typing:  </p>
+             
+<p><b>//goofey</b>  </p>
+             
+<p>And of course you can do all the other goofey things goofey can do.  </p>
+             
+<p><b>Note:</b> Goofey does not work on masquerading networks, even if you 
+   start a proxy with The Circle.  </p>
+             
+<h2><a name="apt-method"></a>9. Using the apt methods</h2>
+                
+<p>(If you don't use Debian/Fink/Connectiva or something else that uses apt 
+   to download packages to install, then you can ignore this section -- though 
+   you should consider changing your operating system distribution to something 
+   that does use apt!)  </p>
+             
+<p>The <tt>cftp</tt> and <tt>chttp</tt> apt methods will have been installed
+    when you ran setup.py (or installed the Circle package if anyone ever
+gets   around to packaging Circle nicely).  </p>
+             
+<p>Edit your <tt>/etc/apt/sources.list</tt> file, changing all occurrences 
+   of <samp>ftp://</samp> to <samp>cftp://</samp>, and all <samp>http://</samp> 
+   occurrences to <samp>chttp://</samp>.  </p>
+             
+<p>When you next do <samp>apt-get install foo</samp>, apt will first try
+searching the circle network for the package before falling back to the correspondingly-named 
+   non-circle method.  </p>
+             
+<h2><a name="plug-ins"></a>10. Using plug-ins</h2>
+
+A number of circle plug-ins are provided in the plug-ins directory.
+In order to activate one of them, you need to put the corresponding
+file in your ~/.circle/plug-ins directory. The plug-in will be loaded 
+on startup.
+ 
+<br>
+           
+<h2>Have fun!</h2>
+         <br>
+       <br>
+      <br>
+     <br>
+       
+</body>
+</html>
+

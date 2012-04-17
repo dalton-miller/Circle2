@@ -1,0 +1,14 @@
+/stats [-p | --profile]
+
+Report network usage and number of peers.
+
+If `-p' or `--profile' is given, then give an itemized account of network usage. This is for people who are interested in modifying Circle to use less bandwidth. Thus, the figures don't necessarily make much sense without reading the source code.
+
+The given summary figure is a sum of data sent & received. The `direct recvfrom' item of `/stats --profile' represents amount received; the rest are the components in sent data.
+
+`hdl msg' items represent the total size of replies to the given request type. `grep "def handle(" *.py' shows the places where these replies are generated. Most requests belong to node.py (see perform_standard_request). The return value of Whatever.handle is what gets sent (after being picked in node.py:handle_message).
+
+`send msg' items can usually be found with `grep "call.*message" *.py'. (Also for finding the triggers of `hdl msg message' traffic.)
+
+At the time of writing, the `glob' messages aren't broken down into their components in the network profile.
+

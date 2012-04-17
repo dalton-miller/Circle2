@@ -1,0 +1,6 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/files.xml">Files</link>
+
+If you want to search for files, you may use the /search command. Type <command>/search</command> and a keyword, like for example 'mozart', and validate with enter. A list of files matching the keyword will be displayed. If you click (left button) on a file, it will be played or displayed, depending on its type. If you click with the right button, a list of options will show up.
+
+[<link path="ixml/files.xml">next</link>]
+

@@ -1,0 +1,8 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/commands.xml">Commands</link> :: <link path="ixml/cmd_recall.xml">recall</link>
+
+/recall
+
+Recall the last message you sent.
+
+This only works for messages sent to people who aren't currently online.
+

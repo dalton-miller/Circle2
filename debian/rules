@@ -1,0 +1,82 @@
+#!/usr/bin/make -f
+# Sample debian/rules that uses debhelper.
+# GNU copyright 1997 to 1999 by Joey Hess.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# This is the debhelper compatibility version to use.
+export DH_COMPAT=3
+
+CFLAGS = -Wall -O2
+ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -g
+endif
+ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
+	INSTALL_PROGRAM += -s
+endif
+
+debian/circle.1: circle
+	help2man -s 1 -o $@ -N ./circle
+
+configure:
+
+build:
+	dh_testdir
+	CFLAGS="$(CFLAGS)" python2.1 ./setup.py build
+
+clean:
+	dh_testdir
+#	dh_testroot
+#	python2.1 ./setup.py clean
+	rm -rf build circlelib/*.pyc
+	dh_clean build-stamp tmp
+
+install: build debian/circle.1
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+	python2.1 ./setup.py install --prefix=/usr --root=$(CURDIR)/debian/circle
+	set -e; for i in debian/circle/usr/bin/circle debian/circle/usr/bin/circled; do \
+	  (echo '#! /usr/bin/python2.1'; sed 1d $$i) > tmp && mv tmp $$i; \
+	  chmod 755 $$i; \
+	done
+	install -m 644 debian/circle-icon.xpm $(CURDIR)/debian/circle/usr/X11R6/include/X11/pixmaps/circle-icon.xpm
+
+# Build architecture-independent files here.
+binary-indep: build install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+#	dh_installdebconf	
+	dh_installdocs
+	dh_installexamples
+	dh_installmenu
+#	dh_installlogrotate
+#	dh_installemacsen
+#	dh_installpam
+#	dh_installmime
+#	dh_installinit
+#	dh_installcron
+	dh_installman debian/circle.1
+#	dh_installinfo
+#	dh_undocumented
+	dh_installchangelogs 
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+#	dh_makeshlibs
+	dh_installdeb
+#	dh_perl
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

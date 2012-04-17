@@ -1,0 +1,311 @@
+#################################################################
+#
+# thomas
+#
+
+
+
+might be fixed (under observation):
+ - upload can slow things down, to the point that hashtable 
+   gets inactive: fix priorities
+   -> not fixed, revert to previous state
+
+bugs:
+ - windows proxy
+ - gossip freeze
+ - disconnecting identity takes too long
+ - offload sometimes non monotonic
+ - playlist : offset bug
+ - search filter does not work for text files
+ - ls -a is broken
+ - window called 'local files'
+ - gtk crashes if used among different X sessions
+ - talk to somebody offline: check if he is really offline before caching
+ - add handler for 'chat message 2' if interface is down
+ - daemon started remotely: should give back tty connection: dev null?
+ - text mode: history, /get
+ - /give python expression 
+
+code cleanup:
+ - the job of setting tabs belongs to the gui (and it should be made smarter):
+   need to define markers for an array
+
+
+feature requests:
+ - add the circle url of the current release to the download page
+
+ - directories: list all roots with ls, not just the first one
+
+ - tit for tat strategy: let others dl my files only if they let me dl theirs
+   use a "security" tab in config
+
+ - random playlist: pick songs along a few dimensions (styles)
+
+ - notifications: 'x joined channel #y'
+ - directories:  
+    publish dirs 
+    dl dir dialog: count the files and size (when publishing)
+    show a hierarchy of downloads instead of a list: easier to cancel
+    use an interior
+
+ - cursor up
+ - check if somebody has left: poll
+   same for people arriving: identity did not pass test
+
+ - menu key should make menu disappear
+ - moving files: use a selection, 
+    enable this selection for the terminal too 
+    (eg with an environment variable)
+ - imageviewer: close window with keyboard
+ - bash like completions for shell: parse bashrc
+ - max upload speed
+ - enforce sharing
+ - tabs : compute for each paragraph
+ - ? display help in the bottom, after the insertion point. add a close button
+   or maybe only for the tutorial...
+
+ - chat: more than one window, for channels
+ - browse people's download dir?
+ - time of last login
+ - auctions
+ - some ppl might not want to share files: redefine the core
+ - version request
+ - daemon: circle -n
+ - daemon: circle disconnect (and button in the gui)
+ - move to kademlia
+ - support bittorrent
+ - add variable info to the notebook tab labels, eg file playing, number of messages unread
+    Here is how to change color:
+      l=pango.AttrList()
+      attr = pango.AttrForeground(0,0,65535,0,-1)
+      l.insert(attr)
+      app.chat_tab_label.set_attributes(l)
+
+gui: 
+ - lists with gtktreeview
+ - drag and drop...
+ - download creates empty files...
+ - roots: ls should list all of a persons pub files
+ - drop: cannot move dir to upper dir..
+ - bug for no pub dir, 
+
+ - view x's files: do not need to make acq for that
+ - if a maintainer goes off, not immediately seen...? at least not by a non activated client
+ - check who is watching a user?
+ - current version of channel caching does not work!
+ - accelerate /find -oh: display first the ip
+ - introduce hysteresis in activate
+ - fix remaining name_server issues (no reply):
+       keep considering a no replier as offline
+       on the next request, before answering that somebody is offline, check in the dht.
+       in chat channel, consider him as online if he receives the message
+ - ability to resume downloads + tcp
+
+ - fix the 'keep after playing' thing
+
+----------------------------------------------------------------------
+
+ -about xmlterm:
+ 
+there are objects that should watch others, be warned of a change.
+if I do ls I get a list
+the list should be warned of a change
+even if it is another user's files
+
+General ideas for structured commands:
+ a command uses a portion of terminal space, delimited by two fields.
+ it should be able to create new fields within that domain
+ at initialization, it receives a single field.
+ it might decide to use only this field, or to allocate more fields.
+ it should also be able to close or redraw its fields.
+
+...all this with xml!
+
+first, there should be a shell mode for circle. 
+enter it though a command, or control-D.
+
+in this shell mode the role of the ui is 
+to behave as much as possible like a terminal:
+set the echo to on, handle esc sequences, 
+do not redraw characters.
+
+However augmented commands would use xml, or maybe escape sequences
+I need to define escape sequences in order to:
+ - create a new child. sequences for child_before, child_after.
+ - indicate which field is being updated (use an integer)
+ - indicate more than just color: fonts, etc
+Each command would use its own set of integers in order to refer to its own fields
+The terminal should know what belongs to whom.
+ - left click actions, right-click menus are methods 
+that depend on the type of field that is clicked. 
+a command might create a bunch of these fields. 
+it would be better to have a number of predefined types. 
+so when a new field is created, its type should be indicated...
+however it is the command that knows the appropriate behaviour.
+
+once this works, there would be a command that enters circle-chat.
+entering circle-chat would make the right panel visible.
+
+maybe it would be possible to include xml into esc sequences?
+the problem with xml is that it does not allow to "come back" 
+and modify what has been done, like escape sequences.
+
+however xml has advantages: tags can be used by commands
+(example for a grep -size)
+
+given a list of files, for example, it should be 
+possible to re-sort it, to add or remove displayed options.
+
+other problem:
+I want the terminal to have evolved auto-completion, 
+and to check things as I type.
+
+among the possible auto-completions: not only files, but users, etc.
+
+
+---------------
+
+ - playlist does not always play list
+
+ - ability to ignore people
+ - channels watchers:
+   - be warned when somebody joins a channel
+
+   a channel would have a 'watch' option...
+   or, better: watch a channel only if you joined it.
+   that way, no watcher are needed: somebody who joins 
+   a channel sends a message automatically.
+   "x joined channel #abc"
+   "x left channel #abc"
+
+ - store time of last login in offline identities. 
+ - test the windows version...
+
+ - better cache:
+   the cache should publish in its own hashtable (should be active)
+   get rid of 'service data cache' because it will not scale
+   (eventually, also get rid of 'service identity')
+   the peer that caches the data should be the same as the 
+   portion of the table where it is published. that is, it 
+   should be the peer in charge of this portion.
+   (maybe find a way to still use the '24 hours' thing)
+
+
+older stuff : 
+
+fonts, cursor color
+text mode: use curses
+
+/clear searches
+/ls : recursiveness, hide/show directories, etcx... regexp
+/ls, /find: sort by type, by size. 
+keyword lookup: do not use largest, but look at statistical frequencies.
+kep a mini dictionnary (100 words) of the requests performed and the score of each word
+local tabs.
+regexp and keywords: do it at the level of the node.
+/get and /grep: pipe results
+add players like gimp, xine, freeamp: plugins
+html files: lookup their title, title!=filename, like for mp3s
+colors: remote files, people, visited links, local files.
+
+anti leech: for the currency system.
+you need to give in order to receive.
+
+-------------------------------
+
+propaganda for website: see shareaza
+
+
+#######################################################################
+# Old todolist (from circle.py)
+#
+
+# TODO: jiri: rewrite getting started
+
+#Detect and use python2 if available? Or package for linux as well?
+
+#Receive while senderer going offline: sender reappears!
+
+# TODO: Thomas Mangin
+#    Be able to create aliases to group a number of users to chat with
+#    Show the number of hash stored by the node
+#    Make in sort that daemon store more node than normal node
+
+# TODO:
+#   - internationalization
+#   German - njh, Japanese - sarahg
+#   will do french as soon as the po file is available - Thomas
+
+# BUG: acb & slhan
+#   - "Browse their files" sometimes browses the wrong computer
+
+# TODO: samsouk
+#   - option to omit self from search?
+#   - self shows up as two sources in search
+
+# TODO:
+#   - option to publish apt cache in daemon
+
+# TODO: 
+#   - hash load meter / indicate when finished
+
+# TODO: Brendan
+#   - search in gossip
+
+# TODO: Ovind Stegard
+#   - download speed in kb/s
+
+# TODO: Thomas Mangin
+#   - give daemons names
+
+# TODO: mark
+#   - automate copying of identity
+
+# TODO: Andrew Pam
+#   - download speed, eta
+
+# TODO: insanity
+#   - upload throttle
+
+# TODO: Oliver Migeot
+#   - ability to ignore people
+
+# TODO: ryan
+#   - documentation
+
+# TODO: debbiep
+#   - if in kde, use kde browser?
+#   [obsoleted by channels?] - acquaintance classes for gossip
+#circle's completion could never be as sophisticated as zsh's
+#...
+#it is just that zsh has very very powerful completion, much more
+#than just filenames.
+#I do appreciate that you can shell-escape from circle, but I'm
+#much more likely to want to go the other way because 98% of the time
+#I'm using the shell and don't want to have to type // in front of
+#every command.
+#I guess it's the polling vs interrupts argument all over again.
+#circle's great in interrupt mode, but my work model requires
+#polling.
+
+
+# TODO: (sarahg's suggestions)
+#   - multi window chat
+#   - skins (for circle diagram, search area)
+#   - configurable font size
+#   - no spaces in nicks
+
+# TODO: njh
+#   *  whiteboard
+#   * ability to hook into send and receive of chat messages
+#   * faces
+
+# TODO: jiri
+#   [ somewhat obsoleted by popularity sorting ] - trust network for mp3s
+#   - retrieve offline messages only after have notified all watchers
+
+# TODO: zaphod
+#   - option to auto quiet after n minutes !! (maybe monitor mouse to see if person active...)
+#   - resuming downloads
+#   - spell checker in gossip?
+#

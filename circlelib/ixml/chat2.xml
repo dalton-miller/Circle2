@@ -1,0 +1,6 @@
+<link path="ixml/help.xml">The Circle Help</link> :: <link path="ixml/chat2.xml">Finding people (2)</link>
+
+Now that you entered <command>/who #welcome</command>, a list of people should be displayed. If you click (left button) on their nicknames, they will be added to your prompt, which means that you are ready to talk to them. They will also be added to your acquaintances list. If you click with the right mouse button, you will have more options. If you click on their IP address you will browse their files.
+
+[<link path="ixml/chat.xml">prev</link>]
+
